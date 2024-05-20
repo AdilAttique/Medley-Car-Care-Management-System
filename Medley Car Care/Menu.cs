@@ -38,17 +38,20 @@ namespace Medley_Car_Care
            
             /*ToolStripMenuItem clickedMenuItem = (ToolStripMenuItem)sender;
             clickedMenuItem.Font = new Font(currentMenuItem.Font, FontStyle.Bold);*/
+         
             ToolStripMenuItem clickedMenuItem = (ToolStripMenuItem)e.ClickedItem;
 
             // Apply bold font to the clicked item
             clickedMenuItem.Font = new Font(clickedMenuItem.Font, FontStyle.Bold);
            
-            if(clickedMenuItem.Text == "Log Out")
-            {
-                Login login = new Login();
-                login.Show();
-                this.Hide();
-            }
+     
+               
+             Inventory inventory = new Inventory();
+             inventory.Show();
+             this.Hide();
+                
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
