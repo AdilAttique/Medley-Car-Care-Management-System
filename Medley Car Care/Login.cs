@@ -13,9 +13,9 @@ namespace Medley_Car_Care
 {
     public partial class Login : Form
     {
-/*        SqlCommand cm = new SqlCommand();
-        dbConnect dbcon = new dbConnect();
-        SqlDataReader dr;*/
+        /*        SqlCommand cm = new SqlCommand();
+                dbConnect dbcon = new dbConnect();
+                SqlDataReader dr;*/
         string title = "Medley Car Care";
         public Login()
         {
@@ -54,8 +54,13 @@ namespace Medley_Car_Care
                 dashboard.Show();
                 this.Hide();
             }
-                try
-                {
+            else
+            {
+                this.InvalidCredentials.Text = "Invalid Credentials!";
+                btnCancel_Click(sender,e);
+            }
+            try
+            {
                 /*  cm = new SqlCommand("SELECT name FROM tbEmployer WHERE name ='" + txtName.Text + "' AND password ='" + txtPassword.Text + "'", dbcon.connect());
                   dbcon.open();
                   dr = cm.ExecuteReader();
@@ -91,7 +96,7 @@ namespace Medley_Car_Care
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -127,6 +132,11 @@ namespace Medley_Car_Care
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+         
         }
     }
 }
