@@ -30,7 +30,7 @@
         {
             menu1 = new Menu();
             navigationBar1 = new NavigationBar();
-            navigationBar2 = new NavigationBar();
+            button1 = new Button();
             SuspendLayout();
             // 
             // menu1
@@ -48,24 +48,32 @@
             navigationBar1.Size = new Size(1920, 94);
             navigationBar1.TabIndex = 5;
             // 
-            // navigationBar2
+            // button1
             // 
-            navigationBar2.BackColor = Color.FromArgb(57, 77, 97);
-            navigationBar2.Location = new Point(0, 0);
-            navigationBar2.Name = "navigationBar2";
-            navigationBar2.Size = new Size(1920, 94);
-            navigationBar2.TabIndex = 7;
+            button1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(472, 260);
+            button1.Name = "button1";
+            button1.Size = new Size(372, 193);
+            button1.TabIndex = 7;
+            button1.Text = "I AM EMPLOYEES";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Employees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1904, 1001);
-            Controls.Add(navigationBar2);
+            ClientSize = new Size(1923, 1061);
+            Controls.Add(button1);
             Controls.Add(menu1);
             Controls.Add(navigationBar1);
+            IsMdiContainer = false;
             Name = "Employees";
             Text = "Employees";
+            Load += Employees_Load;
+            Controls.SetChildIndex(navigationBar1, 0);
+            Controls.SetChildIndex(menu1, 0);
+            Controls.SetChildIndex(button1, 0);
             ResumeLayout(false);
         }
 
@@ -73,6 +81,6 @@
 
         private Menu menu1;
         private NavigationBar navigationBar1;
-        private NavigationBar navigationBar2;
+        private Button button1;
     }
 }

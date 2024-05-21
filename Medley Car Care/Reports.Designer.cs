@@ -28,18 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            button1 = new Button();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(351, 224);
+            button1.Name = "button1";
+            button1.Size = new Size(372, 193);
+            button1.TabIndex = 8;
+            button1.Text = "I AM REPORTS";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Reports
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1904, 1001);
+            Controls.Add(button1);
             Name = "Reports";
             Text = "Reports";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
     }
 }

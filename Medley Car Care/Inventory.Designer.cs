@@ -28,35 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menu1 = new Menu();
-            navigationBar1 = new NavigationBar();
+            button1 = new Button();
             SuspendLayout();
             // 
-            // menu1
+            // button1
             // 
-            menu1.Location = new Point(0, 93);
-            menu1.Name = "menu1";
-            menu1.Size = new Size(252, 940);
-            menu1.TabIndex = 6;
-            menu1.Load += menu1_Load;
-            // 
-            // navigationBar1
-            // 
-            navigationBar1.BackColor = Color.FromArgb(57, 77, 97);
-            navigationBar1.Location = new Point(0, 1);
-            navigationBar1.Name = "navigationBar1";
-            navigationBar1.Size = new Size(1920, 94);
-            navigationBar1.TabIndex = 5;
+            button1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(413, 231);
+            button1.Name = "button1";
+            button1.Size = new Size(372, 193);
+            button1.TabIndex = 8;
+            button1.Text = "I AM INVENTORY";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Inventory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1904, 1001);
-            Controls.Add(menu1);
-            Controls.Add(navigationBar1);
+            Controls.Add(button1);
             Name = "Inventory";
             Text = "Inventory";
+            Load += Inventory_Load;
             ResumeLayout(false);
         }
 
@@ -64,5 +57,6 @@
 
         private Menu menu1;
         private NavigationBar navigationBar1;
+        private Button button1;
     }
 }

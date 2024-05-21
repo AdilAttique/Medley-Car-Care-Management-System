@@ -21,5 +21,10 @@ namespace Medley_Car_Care
         {
 
         }
+
+        private void Inventory_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

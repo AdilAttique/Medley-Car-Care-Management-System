@@ -77,7 +77,7 @@
             Accounts.Text = "      Accounts";
             Accounts.TextAlign = ContentAlignment.MiddleLeft;
             Accounts.UseVisualStyleBackColor = false;
-            Accounts.Click += Dash_Click;
+            Accounts.Click += Accounts_Click;
             // 
             // menuContainer
             // 
@@ -115,6 +115,7 @@
             Dboard.Text = "      Dashboard";
             Dboard.TextAlign = ContentAlignment.MiddleLeft;
             Dboard.UseVisualStyleBackColor = false;
+            Dboard.Click += Dboard_Click;
             // 
             // Billing
             // 
@@ -135,7 +136,7 @@
             Billing.Text = "      Billing";
             Billing.TextAlign = ContentAlignment.MiddleLeft;
             Billing.UseVisualStyleBackColor = false;
-            Billing.Click += button1_Click_1;
+            Billing.Click += billing_Click;
             // 
             // Reports
             // 
@@ -156,7 +157,7 @@
             Reports.Text = "      Reports";
             Reports.TextAlign = ContentAlignment.MiddleLeft;
             Reports.UseVisualStyleBackColor = false;
-            Reports.Click += button3_Click;
+            Reports.Click += Reports_Click;
             // 
             // Inventory
             // 
@@ -177,7 +178,7 @@
             Inventory.Text = "      Inventory";
             Inventory.TextAlign = ContentAlignment.MiddleLeft;
             Inventory.UseVisualStyleBackColor = false;
-            Inventory.Click += button4_Click;
+            Inventory.Click += Inventory_Click;
             // 
             // Customers
             // 
@@ -198,6 +199,7 @@
             Customers.Text = "      Customers";
             Customers.TextAlign = ContentAlignment.MiddleLeft;
             Customers.UseVisualStyleBackColor = false;
+            Customers.Click += Customers_Click;
             // 
             // Employees
             // 
@@ -218,6 +220,7 @@
             Employees.Text = "      Employees";
             Employees.TextAlign = ContentAlignment.MiddleLeft;
             Employees.UseVisualStyleBackColor = false;
+            Employees.Click += Employees_Click_1;
             // 
             // LogOut
             // 
@@ -238,6 +241,7 @@
             LogOut.Text = "      Log Out";
             LogOut.TextAlign = ContentAlignment.MiddleLeft;
             LogOut.UseVisualStyleBackColor = false;
+            LogOut.Click += LogOut_Click_1;
             // 
             // Dashboard
             // 
@@ -250,6 +254,7 @@
             Controls.Add(menuContainer);
             Controls.Add(Cust);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
             Name = "Dashboard";
             Text = "Dashboard";
             WindowState = FormWindowState.Maximized;

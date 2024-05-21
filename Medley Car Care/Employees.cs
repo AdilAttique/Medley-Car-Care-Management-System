@@ -15,6 +15,17 @@ namespace Medley_Car_Care
         public Employees()
         {
             InitializeComponent();
+            
+        }
+
+        private void Employees_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
