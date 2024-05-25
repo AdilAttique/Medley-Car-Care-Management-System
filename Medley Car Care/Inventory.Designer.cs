@@ -36,7 +36,7 @@
             button1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.Location = new Point(413, 231);
             button1.Name = "button1";
-            button1.Size = new Size(372, 193);
+            button1.Size = new Size(382, 195);
             button1.TabIndex = 8;
             button1.Text = "I AM INVENTORY";
             button1.UseVisualStyleBackColor = true;

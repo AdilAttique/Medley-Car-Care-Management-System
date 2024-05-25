@@ -16,5 +16,10 @@ namespace Medley_Car_Care
         {
             InitializeComponent();
         }
+
+        private void Billing_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,20 +14,11 @@ namespace Medley_Car_Care
 {
     public partial class Dashboard : Form
     {
-        Billing bill;
-        Accounts Accs;
-        Reports Reps;
-        Inventory Invent;
-        Customers Custom;
-        Employees Emp;
-        Login login;
-
         public Dashboard()
         {
             InitializeComponent();
-
         }
-
+     
         private void OpenChildForm(Form childForm)
         {
             foreach (Form frm in this.MdiChildren)
@@ -81,6 +72,7 @@ namespace Medley_Car_Care
         private void Accounts_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Accounts());
+            this.DashboardPanel.Hide();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -96,11 +88,14 @@ namespace Medley_Car_Care
         private void Inventory_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Inventory());
+            this.DashboardPanel.Hide();
+
         }
 
         private void Reports_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Reports());
+            this.DashboardPanel.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -111,6 +106,7 @@ namespace Medley_Car_Care
         private void billing_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Billing());
+            this.DashboardPanel.Hide();
         }
 
         private void panel9_Paint(object sender, PaintEventArgs e)
@@ -142,6 +138,7 @@ namespace Medley_Car_Care
                 dashb.Activate();
             }*/
             this.Activate();
+            this.DashboardPanel.Show();
             foreach (Form frm in this.MdiChildren)
             {
                 frm.Close();
@@ -150,17 +147,8 @@ namespace Medley_Car_Care
 
         private void Customers_Click(object sender, EventArgs e)
         {
-            if (Custom == null)
-            {
-                /*Custom = new Customers();
-                Custom.Show();
-                this.Hide();*/
-                OpenChildForm(new Customers());
-            }
-            else
-            {
-                Custom.Activate();
-            }
+            OpenChildForm(new Customers());
+            this.DashboardPanel.Hide();
         }
 
         private void Employees_Click(object sender, EventArgs e)
@@ -171,6 +159,7 @@ namespace Medley_Car_Care
         private void LogOut_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Login());
+            this.DashboardPanel.Hide();
         }
 
         private void Employees_Click_1(object sender, EventArgs e)
@@ -180,14 +169,35 @@ namespace Medley_Car_Care
             this.Hide();*/
 
             OpenChildForm(new Employees());
+            this.DashboardPanel.Hide();
         }
 
         private void LogOut_Click_1(object sender, EventArgs e)
         {
             Login log = new Login();
+            this.Hide();
             log.Show();
-            this.Close();
             log.Activate();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -51,9 +51,9 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(472, 260);
+            button1.Location = new Point(541, 273);
             button1.Name = "button1";
-            button1.Size = new Size(372, 193);
+            button1.Size = new Size(330, 148);
             button1.TabIndex = 7;
             button1.Text = "I AM EMPLOYEES";
             button1.UseVisualStyleBackColor = true;
@@ -63,17 +63,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1923, 1061);
+            ClientSize = new Size(1904, 1001);
             Controls.Add(button1);
             Controls.Add(menu1);
             Controls.Add(navigationBar1);
-            IsMdiContainer = false;
             Name = "Employees";
             Text = "Employees";
             Load += Employees_Load;
-            Controls.SetChildIndex(navigationBar1, 0);
-            Controls.SetChildIndex(menu1, 0);
-            Controls.SetChildIndex(button1, 0);
             ResumeLayout(false);
         }
 

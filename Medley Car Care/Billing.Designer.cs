@@ -49,6 +49,7 @@
             Controls.Add(button1);
             Name = "Billing";
             Text = "Billing";
+            Load += Billing_Load;
             ResumeLayout(false);
         }
 
