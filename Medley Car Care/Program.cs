@@ -1,3 +1,5 @@
+using Syncfusion.Licensing;
+
 namespace Medley_Car_Care
 {
     internal static class Program
@@ -11,7 +13,8 @@ namespace Medley_Car_Care
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+            SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NBaF1cXmhPYVJzWmFZfVpgd19FZFZURWYuP1ZhSXxXdkNjUX9dc3BQR2FbVkU=");
+            Application.Run(new Dashboard());
         }
     }
 }

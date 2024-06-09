@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            Syncfusion.Windows.Forms.Chart.ChartCustomPoint chartCustomPoint1 = new Syncfusion.Windows.Forms.Chart.ChartCustomPoint();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3dItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             Cust = new NavigationBar();
             Accounts = new Button();
             menuContainer = new FlowLayoutPanel();
@@ -42,29 +51,46 @@
             Employees = new Button();
             LogOut = new Button();
             DashboardPanel = new TableLayoutPanel();
+            panel1 = new Panel();
+            TodaysCustomers = new Syncfusion.Windows.Forms.Tools.GradientPanelExt();
+            CustomerCounter = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            CurrencyBox = new Syncfusion.Windows.Forms.Tools.GradientPanelExt();
+            Revenue = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            panel3 = new Panel();
+            DataGraph = new Syncfusion.Windows.Forms.Chart.ChartControl();
             panel2 = new Panel();
-            button2 = new Button();
-            textBox2 = new TextBox();
-            roundedPanel1 = new RoundedPanel(components);
-            mySqlCommand2 = new MySql.Data.MySqlClient.MySqlCommand();
+            tabControl1 = new TabControl();
+            QuickAccessBar = new TabPage();
+            autoLabel5 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            button3 = new Button();
+            textBox4 = new TextBox();
+            tabPage2 = new TabPage();
+            autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            button1 = new Button();
+            textBox3 = new TextBox();
             menuContainer.SuspendLayout();
             DashboardPanel.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)TodaysCustomers).BeginInit();
+            TodaysCustomers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)CurrencyBox).BeginInit();
+            CurrencyBox.SuspendLayout();
+            panel3.SuspendLayout();
             panel2.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // mySqlCommand1
-            // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
+            tabControl1.SuspendLayout();
+            QuickAccessBar.SuspendLayout();
+            tabPage2.SuspendLayout();
+            SuspendLayout();
             // 
             // Cust
             // 
             Cust.BackColor = Color.FromArgb(42, 50, 120);
-            Cust.Location = new Point(0, 1);
+            Cust.Location = new Point(0, 0);
             Cust.Name = "Cust";
-            Cust.Size = new Size(1920, 94);
+            Cust.Size = new Size(1920, 97);
             Cust.TabIndex = 3;
             // 
             // Accounts
@@ -86,7 +112,7 @@
             Accounts.Text = "      Accounts";
             Accounts.TextAlign = ContentAlignment.MiddleLeft;
             Accounts.UseVisualStyleBackColor = false;
-            Accounts.Click += this.Accounts_Click;
+            Accounts.Click += Accounts_Click;
             // 
             // menuContainer
             // 
@@ -103,7 +129,7 @@
             menuContainer.Name = "menuContainer";
             menuContainer.Size = new Size(245, 968);
             menuContainer.TabIndex = 4;
-            menuContainer.Paint += this.flowLayoutPanel1_Paint_1;
+            menuContainer.Paint += flowLayoutPanel1_Paint_1;
             // 
             // Dboard
             // 
@@ -124,7 +150,7 @@
             Dboard.Text = "      Dashboard";
             Dboard.TextAlign = ContentAlignment.MiddleLeft;
             Dboard.UseVisualStyleBackColor = false;
-            Dboard.Click += this.Dboard_Click;
+            Dboard.Click += Dboard_Click;
             // 
             // Billing
             // 
@@ -145,7 +171,7 @@
             Billing.Text = "      Billing";
             Billing.TextAlign = ContentAlignment.MiddleLeft;
             Billing.UseVisualStyleBackColor = false;
-            Billing.Click += this.billing_Click;
+            Billing.Click += billing_Click;
             // 
             // Reports
             // 
@@ -166,7 +192,7 @@
             Reports.Text = "      Reports";
             Reports.TextAlign = ContentAlignment.MiddleLeft;
             Reports.UseVisualStyleBackColor = false;
-            Reports.Click += this.Reports_Click;
+            Reports.Click += Reports_Click;
             // 
             // Inventory
             // 
@@ -187,7 +213,7 @@
             Inventory.Text = "      Inventory";
             Inventory.TextAlign = ContentAlignment.MiddleLeft;
             Inventory.UseVisualStyleBackColor = false;
-            Inventory.Click += this.Inventory_Click;
+            Inventory.Click += Inventory_Click;
             // 
             // Customers
             // 
@@ -208,7 +234,7 @@
             Customers.Text = "      Customers";
             Customers.TextAlign = ContentAlignment.MiddleLeft;
             Customers.UseVisualStyleBackColor = false;
-            Customers.Click += this.Customers_Click;
+            Customers.Click += Customers_Click;
             // 
             // Employees
             // 
@@ -229,7 +255,7 @@
             Employees.Text = "      Employees";
             Employees.TextAlign = ContentAlignment.MiddleLeft;
             Employees.UseVisualStyleBackColor = false;
-            Employees.Click += this.Employees_Click_1;
+            Employees.Click += Employees_Click_1;
             // 
             // LogOut
             // 
@@ -250,101 +276,299 @@
             LogOut.Text = "      Log Out";
             LogOut.TextAlign = ContentAlignment.MiddleLeft;
             LogOut.UseVisualStyleBackColor = false;
-            LogOut.Click += this.LogOut_Click_1;
+            LogOut.Click += LogOut_Click_1;
             // 
             // DashboardPanel
             // 
-            DashboardPanel.BackColor = Color.FloralWhite;
+            DashboardPanel.BackColor = Color.GhostWhite;
             DashboardPanel.BackgroundImageLayout = ImageLayout.None;
-            DashboardPanel.ColumnCount = 2;
-            DashboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 86.53586F));
-            DashboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 13.4641409F));
-            DashboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            DashboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            DashboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            DashboardPanel.ColumnCount = 1;
+            DashboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            DashboardPanel.Controls.Add(panel1, 0, 0);
+            DashboardPanel.Controls.Add(panel3, 0, 2);
             DashboardPanel.Controls.Add(panel2, 0, 1);
-            DashboardPanel.Controls.Add(roundedPanel1, 0, 0);
             DashboardPanel.Location = new Point(242, 93);
             DashboardPanel.Name = "DashboardPanel";
-            DashboardPanel.Padding = new Padding(100);
-            DashboardPanel.RowCount = 2;
-            DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            DashboardPanel.Padding = new Padding(150, 30, 50, 50);
+            DashboardPanel.RowCount = 3;
+            DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             DashboardPanel.Size = new Size(1678, 919);
             DashboardPanel.TabIndex = 6;
-            DashboardPanel.Paint += this.tableLayoutPanel1_Paint_1;
+            DashboardPanel.Paint += tableLayoutPanel1_Paint_1;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.GhostWhite;
+            panel1.Controls.Add(TodaysCustomers);
+            panel1.Controls.Add(CurrencyBox);
+            panel1.Controls.Add(autoLabel1);
+            panel1.Location = new Point(153, 33);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1114, 266);
+            panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint_1;
+            // 
+            // TodaysCustomers
+            // 
+            TodaysCustomers.BackColor = Color.Lavender;
+            TodaysCustomers.Border = new Padding(12);
+            TodaysCustomers.BorderStyle = BorderStyle.None;
+            TodaysCustomers.Controls.Add(CustomerCounter);
+            TodaysCustomers.Controls.Add(autoLabel3);
+            TodaysCustomers.Location = new Point(657, 42);
+            TodaysCustomers.Name = "TodaysCustomers";
+            TodaysCustomers.Size = new Size(334, 196);
+            TodaysCustomers.TabIndex = 4;
+            // 
+            // CustomerCounter
+            // 
+            CustomerCounter.Font = new Font("Bahnschrift Condensed", 21.75F);
+            CustomerCounter.Location = new Point(155, 76);
+            CustomerCounter.Name = "CustomerCounter";
+            CustomerCounter.Size = new Size(27, 35);
+            CustomerCounter.TabIndex = 4;
+            CustomerCounter.Text = "0";
+            // 
+            // autoLabel3
+            // 
+            autoLabel3.Font = new Font("Bahnschrift SemiCondensed", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            autoLabel3.Location = new Point(62, 22);
+            autoLabel3.Name = "autoLabel3";
+            autoLabel3.Size = new Size(216, 25);
+            autoLabel3.TabIndex = 3;
+            autoLabel3.Text = "Customers Served Today";
+            // 
+            // CurrencyBox
+            // 
+            CurrencyBox.BackColor = Color.Lavender;
+            CurrencyBox.Border = new Padding(12);
+            CurrencyBox.BorderStyle = BorderStyle.None;
+            CurrencyBox.Controls.Add(Revenue);
+            CurrencyBox.Controls.Add(autoLabel2);
+            CurrencyBox.Location = new Point(82, 42);
+            CurrencyBox.Name = "CurrencyBox";
+            CurrencyBox.Size = new Size(334, 196);
+            CurrencyBox.TabIndex = 3;
+            // 
+            // Revenue
+            // 
+            Revenue.Font = new Font("Bahnschrift Condensed", 21.75F);
+            Revenue.Location = new Point(136, 76);
+            Revenue.Name = "Revenue";
+            Revenue.Size = new Size(56, 35);
+            Revenue.TabIndex = 4;
+            Revenue.Text = "Rs 0";
+            // 
+            // autoLabel2
+            // 
+            autoLabel2.Font = new Font("Bahnschrift SemiCondensed", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            autoLabel2.Location = new Point(86, 22);
+            autoLabel2.Name = "autoLabel2";
+            autoLabel2.Size = new Size(167, 29);
+            autoLabel2.TabIndex = 3;
+            autoLabel2.Text = "Today's Revenue";
+            // 
+            // autoLabel1
+            // 
+            autoLabel1.Font = new Font("Bahnschrift", 15.75F, FontStyle.Bold);
+            autoLabel1.Location = new Point(0, 0);
+            autoLabel1.Name = "autoLabel1";
+            autoLabel1.Size = new Size(207, 25);
+            autoLabel1.TabIndex = 2;
+            autoLabel1.Text = "Dashboard Overview";
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(DataGraph);
+            panel3.Location = new Point(153, 591);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1472, 258);
+            panel3.TabIndex = 4;
+            // 
+            // DataGraph
+            // 
+            DataGraph.BorderAppearance.BaseColor = Color.Black;
+            DataGraph.BorderAppearance.Interior.ForeColor = Color.Gray;
+            DataGraph.ChartArea.CursorLocation = new Point(0, 0);
+            DataGraph.ChartArea.CursorReDraw = false;
+            DataGraph.ChartArea.YAxesLayoutMode = Syncfusion.Windows.Forms.Chart.ChartAxesLayoutMode.SideBySide;
+            chartCustomPoint1.Font.Facename = "Segoe UI";
+            DataGraph.CustomPoints.Add(chartCustomPoint1);
+            DataGraph.IsWindowLess = false;
+            // 
+            // 
+            // 
+            DataGraph.Legend.Location = new Point(668, 31);
+            DataGraph.Localize = null;
+            DataGraph.Location = new Point(129, 6);
+            DataGraph.Name = "DataGraph";
+            DataGraph.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            DataGraph.PrimaryXAxis.Margin = true;
+            DataGraph.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            DataGraph.PrimaryYAxis.Margin = true;
+            DataGraph.Size = new Size(777, 249);
+            DataGraph.TabIndex = 2;
+            // 
+            // 
+            // 
+            DataGraph.Title.Name = "Default";
+            DataGraph.ToolBar.BackColor = Color.SlateGray;
+            DataGraph.ToolBar.EnableDefaultItems = false;
+            DataGraph.ToolBar.Items.Add(chartToolBarSaveItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarCopyItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarPrintItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarSplitter1);
+            DataGraph.ToolBar.Items.Add(chartToolBarPaletteItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarStyleItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarTypeItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarSeries3dItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarShowLegendItem1);
+            DataGraph.VisualTheme = "";
+            DataGraph.Zooming.Border.BackColor = Color.Transparent;
             // 
             // panel2
             // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(textBox2);
-            panel2.Location = new Point(350, 559);
-            panel2.Margin = new Padding(250, 100, 100, 100);
+            panel2.Controls.Add(tabControl1);
+            panel2.Location = new Point(153, 312);
             panel2.Name = "panel2";
-            panel2.Size = new Size(929, 160);
-            panel2.TabIndex = 1;
+            panel2.Size = new Size(1472, 258);
+            panel2.TabIndex = 3;
             // 
-            // button2
+            // tabControl1
             // 
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(318, 19);
-            button2.Name = "button2";
-            button2.Size = new Size(36, 29);
-            button2.TabIndex = 3;
-            button2.UseVisualStyleBackColor = true;
+            tabControl1.Controls.Add(QuickAccessBar);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(14, 7);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1226, 248);
+            tabControl1.TabIndex = 1;
             // 
-            // textBox2
+            // QuickAccessBar
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(30, 18);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Search here";
-            textBox2.Size = new Size(282, 29);
-            textBox2.TabIndex = 2;
+            QuickAccessBar.BorderStyle = BorderStyle.FixedSingle;
+            QuickAccessBar.Controls.Add(autoLabel5);
+            QuickAccessBar.Controls.Add(button3);
+            QuickAccessBar.Controls.Add(textBox4);
+            QuickAccessBar.Location = new Point(4, 24);
+            QuickAccessBar.Name = "QuickAccessBar";
+            QuickAccessBar.Padding = new Padding(3);
+            QuickAccessBar.Size = new Size(1218, 220);
+            QuickAccessBar.TabIndex = 0;
+            QuickAccessBar.Text = "Inventory";
+            QuickAccessBar.UseVisualStyleBackColor = true;
             // 
-            // roundedPanel1
+            // autoLabel5
             // 
-            roundedPanel1.BackColor = Color.Gray;
-            roundedPanel1.CornerRadius = 30;
-            roundedPanel1.Location = new Point(103, 103);
-            roundedPanel1.Name = "roundedPanel1";
-            roundedPanel1.Size = new Size(348, 206);
-            roundedPanel1.TabIndex = 2;
+            autoLabel5.Dock = DockStyle.Right;
+            autoLabel5.Font = new Font("Bahnschrift Light Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoLabel5.Location = new Point(1120, 3);
+            autoLabel5.Name = "autoLabel5";
+            autoLabel5.Size = new Size(93, 23);
+            autoLabel5.TabIndex = 6;
+            autoLabel5.Text = "Quick Access";
             // 
-            // mySqlCommand2
+            // button3
             // 
-            mySqlCommand2.CacheAge = 0;
-            mySqlCommand2.Connection = null;
-            mySqlCommand2.EnableCaching = false;
-            mySqlCommand2.Transaction = null;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(294, 7);
+            button3.Name = "button3";
+            button3.Size = new Size(36, 29);
+            button3.TabIndex = 5;
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(6, 6);
+            textBox4.Name = "textBox4";
+            textBox4.PlaceholderText = "Search here";
+            textBox4.Size = new Size(282, 29);
+            textBox4.TabIndex = 4;
+            // 
+            // tabPage2
+            // 
+            tabPage2.BorderStyle = BorderStyle.FixedSingle;
+            tabPage2.Controls.Add(autoLabel4);
+            tabPage2.Controls.Add(button1);
+            tabPage2.Controls.Add(textBox3);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1218, 220);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Customer";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // autoLabel4
+            // 
+            autoLabel4.Dock = DockStyle.Right;
+            autoLabel4.Font = new Font("Bahnschrift Light Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoLabel4.Location = new Point(1120, 3);
+            autoLabel4.Name = "autoLabel4";
+            autoLabel4.Size = new Size(93, 23);
+            autoLabel4.TabIndex = 7;
+            autoLabel4.Text = "Quick Access";
+            // 
+            // button1
+            // 
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(294, 7);
+            button1.Name = "button1";
+            button1.Size = new Size(36, 29);
+            button1.TabIndex = 5;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(6, 6);
+            textBox3.Name = "textBox3";
+            textBox3.PlaceholderText = "Search here";
+            textBox3.Size = new Size(282, 29);
+            textBox3.TabIndex = 4;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new SizeF(7F, 15F);
-            this.AutoScaleMode = AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            this.BackColor = Color.AliceBlue;
-            this.ClientSize = new Size(1904, 1008);
-            this.Controls.Add(DashboardPanel);
-            this.Controls.Add(menuContainer);
-            this.Controls.Add(Cust);
-            this.Icon = (Icon)resources.GetObject("$this.Icon");
-            this.IsMdiContainer = true;
-            this.Name = "Dashboard";
-            this.Text = "Dashboard";
-            this.WindowState = FormWindowState.Maximized;
-            this.Load += this.Dashboard_Load;
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackColor = Color.AliceBlue;
+            ClientSize = new Size(1904, 1008);
+            Controls.Add(menuContainer);
+            Controls.Add(Cust);
+            Controls.Add(DashboardPanel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
+            Name = "Dashboard";
+            Text = "Dashboard";
+            WindowState = FormWindowState.Maximized;
+            Load += Dashboard_Load;
             menuContainer.ResumeLayout(false);
             DashboardPanel.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)TodaysCustomers).EndInit();
+            TodaysCustomers.ResumeLayout(false);
+            TodaysCustomers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)CurrencyBox).EndInit();
+            CurrencyBox.ResumeLayout(false);
+            CurrencyBox.PerformLayout();
+            panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            this.ResumeLayout(false);
+            tabControl1.ResumeLayout(false);
+            QuickAccessBar.ResumeLayout(false);
+            QuickAccessBar.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private NavigationBar Cust;
         private Button Accounts;
         private Button Billing;
@@ -357,10 +581,26 @@
         private Button Reports;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel DashboardPanel;
-        private Panel panel2;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand2;
-        private Button button2;
-        private TextBox textBox2;
-        private RoundedPanel roundedPanel1;
+        private Panel panel1;
+        private TabControl tabControl1;
+        private TabPage QuickAccessBar;
+        private TabPage tabPage2;
+        private Button button3;
+        private TextBox textBox4;
+        private Button button1;
+        private TextBox textBox3;
+        private Panel panel3;
+        private Panel panel2;
+        private Syncfusion.Windows.Forms.Chart.ChartControl DataGraph;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel1;
+        private Syncfusion.Windows.Forms.Tools.GradientPanelExt CurrencyBox;
+        private Syncfusion.Windows.Forms.Tools.GradientPanelExt TodaysCustomers;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel3;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel2;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel CustomerCounter;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel5;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel Revenue;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel4;
     }
 }

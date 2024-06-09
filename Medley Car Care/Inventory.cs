@@ -26,5 +26,19 @@ namespace Medley_Car_Care
         {
 
         }
+
+        private void ShowUserControl(UserControl userControl)
+        {
+            // Add the new user control to the panel
+            userControl.Dock = DockStyle.Fill;
+            panel1.Controls.Add(userControl);
+        }
+
+        private void InvSearchButton_Click(object sender, EventArgs e)
+        {
+            InvSearchForm userControl1 = new InvSearchForm();
+            ShowUserControl(userControl1);
+           
+        }
     }
 }

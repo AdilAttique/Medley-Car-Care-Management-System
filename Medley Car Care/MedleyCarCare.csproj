@@ -2,15 +2,26 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
     <RootNamespace>Medley_Car_Care</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>MedleyLogo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="MedleyLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.4.0" />
+    <PackageReference Include="Syncfusion.Chart.Windows" Version="25.2.6" />
+    <PackageReference Include="Syncfusion.SfChart.WPF" Version="25.2.6" />
+    <PackageReference Include="Syncfusion.Shared.Base" Version="25.2.6" />
+    <PackageReference Include="Syncfusion.Tools.Windows" Version="25.2.6" />
+    <PackageReference Include="Syncfusion.UI.WPF.NET" Version="25.2.7" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="25.2.6" />
   </ItemGroup>
 
   <ItemGroup>

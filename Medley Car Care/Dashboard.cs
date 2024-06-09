@@ -17,8 +17,9 @@ namespace Medley_Car_Care
         public Dashboard()
         {
             InitializeComponent();
+         
         }
-     
+
         private void OpenChildForm(Form childForm)
         {
             foreach (Form frm in this.MdiChildren)
@@ -126,17 +127,6 @@ namespace Medley_Car_Care
 
         private void Dboard_Click(object sender, EventArgs e)
         {
-            /*if (dashb == null)
-            {
-                *//*dashb = new Dashboard();
-                dashb.MdiParent = this;
-                dashb.Show();*//*
-                OpenChildForm(new Dashboard());
-            }
-            else
-            {
-                dashb.Activate();
-            }*/
             this.Activate();
             this.DashboardPanel.Show();
             foreach (Form frm in this.MdiChildren)
@@ -164,10 +154,6 @@ namespace Medley_Car_Care
 
         private void Employees_Click_1(object sender, EventArgs e)
         {
-            /*Emp = new Employees();
-            Emp.Show();
-            this.Hide();*/
-
             OpenChildForm(new Employees());
             this.DashboardPanel.Hide();
         }
@@ -196,6 +182,21 @@ namespace Medley_Car_Care
         }
 
         private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void currencyTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
