@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.Security.ExchangeActiveSyncProvisioning;
 
 namespace Medley_Car_Care
 {
@@ -24,11 +25,16 @@ namespace Medley_Car_Care
 
         private void Customers_Load(object sender, EventArgs e)
         {
-
+            ShowUserControl(customerSearch);
+            this.CustSearchButton.BackColor = Color.MediumBlue;
         }
 
         private void ShowUserControl(UserControl userControl)
         {
+            foreach(Button btn in this.CustomerNavBar.Controls)
+            {
+                btn.BackColor = Color.DarkBlue;
+            }
             mainPanel.Controls.Clear();
             userControl.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(userControl);
@@ -37,17 +43,20 @@ namespace Medley_Car_Care
 
         private void CustSearchButton_Click(object sender, EventArgs e)
         {
-          
+            ShowUserControl(customerSearch);
+            this.CustSearchButton.BackColor = Color.MediumBlue;
         }
 
         private void CustomerList_Click(object sender, EventArgs e)
         {
-
+            ShowUserControl(customerList);
+            this.CustomerList.BackColor = Color.MediumBlue;
         }
 
         private void AddNew_Click(object sender, EventArgs e)
         {
-
+            ShowUserControl(customerAdd);
+            this.AddNew.BackColor = Color.MediumBlue;
         }
     }
 }
