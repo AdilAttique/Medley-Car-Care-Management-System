@@ -8,5 +8,6 @@ namespace Medley_Car_Care
 {
     internal class Customer : Person
     {
+        Car car = new Car();
     }
 }

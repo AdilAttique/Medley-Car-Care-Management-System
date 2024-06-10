@@ -42,8 +42,8 @@
             // panel1
             // 
             panel1.BackColor = Color.Lavender;
-            panel1.Controls.Add(mainPanel);
             panel1.Controls.Add(InvNavBar);
+            panel1.Controls.Add(mainPanel);
             panel1.Location = new Point(242, 93);
             panel1.Name = "panel1";
             panel1.Size = new Size(1678, 919);

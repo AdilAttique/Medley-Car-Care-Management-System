@@ -14,7 +14,7 @@ namespace Medley_Car_Care
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NBaF1cXmhPYVJzWmFZfVpgd19FZFZURWYuP1ZhSXxXdkNjUX9dc3BQR2FbVkU=");
-            Application.Run(new Dashboard());
+            Application.Run(new Login());
         }
     }
 }

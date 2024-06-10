@@ -8,5 +8,7 @@ namespace Medley_Car_Care
 {
     internal class Person
     {
+        string name = "";
+        string mobileNumber = "";
     }
 }
