@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace Medley_Car_Care
 {
-    public partial class InvSearchForm : UserControl
+    public partial class InvStock : UserControl
     {
-        public InvSearchForm()
+        public InvStock()
         {
             InitializeComponent();
         }
 
-        private void InvSearchForm_Load(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+
     }
 }

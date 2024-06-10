@@ -12,6 +12,10 @@ namespace Medley_Car_Care
 {
     public partial class Inventory : Form
     {
+        InvSearchForm userControl1 = new InvSearchForm();
+        InvStock userControl2 = new InvStock();
+        InvUpdate userControl3 = new InvUpdate();
+
         public Inventory()
         {
             InitializeComponent();
@@ -29,16 +33,45 @@ namespace Medley_Car_Care
 
         private void ShowUserControl(UserControl userControl)
         {
-            // Add the new user control to the panel
+            mainPanel.Controls.Clear();
             userControl.Dock = DockStyle.Fill;
-            panel1.Controls.Add(userControl);
+            mainPanel.Controls.Add(userControl);
+            userControl.BringToFront();
         }
 
         private void InvSearchButton_Click(object sender, EventArgs e)
         {
-            InvSearchForm userControl1 = new InvSearchForm();
+            this.InvSearchButton.BackColor = Color.MediumBlue;
+            this.UpdateButton.BackColor = Color.DarkBlue;
+            this.StockButton.BackColor = Color.DarkBlue;
             ShowUserControl(userControl1);
-           
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            this.InvSearchButton.BackColor = Color.MediumBlue;
+            ShowUserControl(userControl1);
+        }
+
+        private void StockButton_Click(object sender, EventArgs e)
+        {
+            this.InvSearchButton.BackColor = Color.DarkBlue;
+            this.UpdateButton.BackColor = Color.DarkBlue;
+            this.StockButton.BackColor = Color.MediumBlue;
+            ShowUserControl(userControl2);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            this.InvSearchButton.BackColor = Color.DarkBlue;
+            this.StockButton.BackColor = Color.DarkBlue;
+            this.UpdateButton.BackColor = Color.MediumBlue;
+            ShowUserControl(userControl3);
         }
     }
 }

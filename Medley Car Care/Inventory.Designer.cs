@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             panel1 = new Panel();
+            mainPanel = new Panel();
             InvNavBar = new Panel();
             UpdateButton = new Button();
             StockButton = new Button();
@@ -40,12 +41,24 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.GhostWhite;
+            panel1.BackColor = Color.Lavender;
+            panel1.Controls.Add(mainPanel);
             panel1.Controls.Add(InvNavBar);
             panel1.Location = new Point(242, 93);
             panel1.Name = "panel1";
             panel1.Size = new Size(1678, 919);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // mainPanel
+            // 
+            mainPanel.BackColor = Color.GhostWhite;
+            mainPanel.Dock = DockStyle.Bottom;
+            mainPanel.Location = new Point(0, 66);
+            mainPanel.Name = "mainPanel";
+            mainPanel.Size = new Size(1678, 853);
+            mainPanel.TabIndex = 1;
+            mainPanel.Paint += panel2_Paint;
             // 
             // InvNavBar
             // 
@@ -80,6 +93,7 @@
             UpdateButton.Text = "      Update";
             UpdateButton.TextAlign = ContentAlignment.MiddleLeft;
             UpdateButton.UseVisualStyleBackColor = false;
+            UpdateButton.Click += UpdateButton_Click;
             // 
             // StockButton
             // 
@@ -101,6 +115,7 @@
             StockButton.Text = "      Stock";
             StockButton.TextAlign = ContentAlignment.MiddleLeft;
             StockButton.UseVisualStyleBackColor = false;
+            StockButton.Click += StockButton_Click;
             // 
             // InvSearchButton
             // 
@@ -151,5 +166,6 @@
         private Button UpdateButton;
         private Button StockButton;
         private Button InvSearchButton;
+        private Panel mainPanel;
     }
 }

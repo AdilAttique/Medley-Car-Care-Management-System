@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Syncfusion.Windows.Converters;
+using Syncfusion.Windows.Tools;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +19,7 @@ namespace Medley_Car_Care
         public Dashboard()
         {
             InitializeComponent();
-         
+
         }
 
         private void OpenChildForm(Form childForm)
@@ -26,6 +28,13 @@ namespace Medley_Car_Care
             {
                 frm.Close();
             }
+            this.Dboard.BackColor = Color.FromArgb(21, 25, 48);
+            this.Billing.BackColor = Color.FromArgb(21, 25, 48);
+            this.Reports.BackColor = Color.FromArgb(21, 25, 48);
+            this.Accounts.BackColor = Color.FromArgb(21, 25, 48);
+            this.Inventory.BackColor = Color.FromArgb(21, 25, 48);
+            this.Customers.BackColor = Color.FromArgb(21, 25, 48);
+            this.Employees.BackColor = Color.FromArgb(21, 25, 48);
             childForm.MdiParent = this;
             childForm.Dock = DockStyle.Fill;
             childForm.Show();
@@ -51,20 +60,6 @@ namespace Medley_Car_Care
 
         }
 
-        private void BillCustomer_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void BillCustomer_Hover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void menu1_Load(object sender, EventArgs e)
         {
 
@@ -73,22 +68,14 @@ namespace Medley_Car_Care
         private void Accounts_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Accounts());
+            this.Accounts.BackColor = Color.DarkBlue;
             this.DashboardPanel.Hide();
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void Inventory_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Inventory());
+            this.Inventory.BackColor = Color.DarkBlue;
             this.DashboardPanel.Hide();
 
         }
@@ -96,17 +83,15 @@ namespace Medley_Car_Care
         private void Reports_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Reports());
+            this.Reports.BackColor = Color.DarkBlue;
             this.DashboardPanel.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void billing_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Billing());
+            this.Billing.BackColor = Color.DarkBlue;
             this.DashboardPanel.Hide();
         }
 
@@ -129,15 +114,23 @@ namespace Medley_Car_Care
         {
             this.Activate();
             this.DashboardPanel.Show();
+            this.Dboard.BackColor = Color.DarkBlue;
             foreach (Form frm in this.MdiChildren)
             {
                 frm.Close();
             }
+            this.Billing.BackColor = Color.FromArgb(21, 25, 48);
+            this.Reports.BackColor = Color.FromArgb(21, 25, 48);
+            this.Accounts.BackColor = Color.FromArgb(21, 25, 48);
+            this.Inventory.BackColor = Color.FromArgb(21, 25, 48);
+            this.Customers.BackColor = Color.FromArgb(21, 25, 48);
+            this.Employees.BackColor = Color.FromArgb(21, 25, 48);
         }
 
         private void Customers_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Customers());
+            this.Customers.BackColor = Color.DarkBlue;
             this.DashboardPanel.Hide();
         }
 
@@ -155,6 +148,7 @@ namespace Medley_Car_Care
         private void Employees_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new Employees());
+            this.Employees.BackColor = Color.DarkBlue;
             this.DashboardPanel.Hide();
         }
 
@@ -199,6 +193,11 @@ namespace Medley_Car_Care
         private void currencyTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuContainer_Paint(object sender, PaintEventArgs e)
+        {
+            this.Dboard.BackColor = Color.DarkBlue;
         }
     }
 }

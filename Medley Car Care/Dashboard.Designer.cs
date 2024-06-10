@@ -129,7 +129,7 @@
             menuContainer.Name = "menuContainer";
             menuContainer.Size = new Size(245, 968);
             menuContainer.TabIndex = 4;
-            menuContainer.Paint += flowLayoutPanel1_Paint_1;
+            menuContainer.Paint += menuContainer_Paint;
             // 
             // Dboard
             // 
