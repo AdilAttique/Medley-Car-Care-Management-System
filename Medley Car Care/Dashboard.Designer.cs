@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            Syncfusion.Windows.Forms.Chart.ChartCustomPoint chartCustomPoint1 = new Syncfusion.Windows.Forms.Chart.ChartCustomPoint();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3dItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Cust = new NavigationBar();
+            Syncfusion.Windows.Forms.Chart.ChartCustomPoint chartCustomPoint2 = new Syncfusion.Windows.Forms.Chart.ChartCustomPoint();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3dItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             Accounts = new Button();
             menuContainer = new FlowLayoutPanel();
             Dboard = new Button();
@@ -71,6 +70,9 @@
             autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             button1 = new Button();
             textBox3 = new TextBox();
+            gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            Time = new Label();
+            MedleyName = new Label();
             menuContainer.SuspendLayout();
             DashboardPanel.SuspendLayout();
             panel1.SuspendLayout();
@@ -83,15 +85,9 @@
             tabControl1.SuspendLayout();
             QuickAccessBar.SuspendLayout();
             tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gradientPanel1).BeginInit();
+            gradientPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // Cust
-            // 
-            Cust.BackColor = Color.FromArgb(42, 50, 120);
-            Cust.Location = new Point(0, 0);
-            Cust.Name = "Cust";
-            Cust.Size = new Size(1920, 97);
-            Cust.TabIndex = 3;
             // 
             // Accounts
             // 
@@ -394,8 +390,8 @@
             DataGraph.ChartArea.CursorLocation = new Point(0, 0);
             DataGraph.ChartArea.CursorReDraw = false;
             DataGraph.ChartArea.YAxesLayoutMode = Syncfusion.Windows.Forms.Chart.ChartAxesLayoutMode.SideBySide;
-            chartCustomPoint1.Font.Facename = "Segoe UI";
-            DataGraph.CustomPoints.Add(chartCustomPoint1);
+            chartCustomPoint2.Font.Facename = "Segoe UI";
+            DataGraph.CustomPoints.Add(chartCustomPoint2);
             DataGraph.IsWindowLess = false;
             // 
             // 
@@ -416,16 +412,16 @@
             DataGraph.Title.Name = "Default";
             DataGraph.ToolBar.BackColor = Color.SlateGray;
             DataGraph.ToolBar.EnableDefaultItems = false;
-            DataGraph.ToolBar.Items.Add(chartToolBarSaveItem1);
-            DataGraph.ToolBar.Items.Add(chartToolBarCopyItem1);
-            DataGraph.ToolBar.Items.Add(chartToolBarPrintItem1);
-            DataGraph.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
-            DataGraph.ToolBar.Items.Add(chartToolBarSplitter1);
-            DataGraph.ToolBar.Items.Add(chartToolBarPaletteItem1);
-            DataGraph.ToolBar.Items.Add(chartToolBarStyleItem1);
-            DataGraph.ToolBar.Items.Add(chartToolBarTypeItem1);
-            DataGraph.ToolBar.Items.Add(chartToolBarSeries3dItem1);
-            DataGraph.ToolBar.Items.Add(chartToolBarShowLegendItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarSaveItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarCopyItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarPrintItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarSplitter2);
+            DataGraph.ToolBar.Items.Add(chartToolBarPaletteItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarStyleItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarTypeItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarSeries3dItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             DataGraph.VisualTheme = "";
             DataGraph.Zooming.Border.BackColor = Color.Transparent;
             // 
@@ -531,6 +527,43 @@
             textBox3.Size = new Size(282, 29);
             textBox3.TabIndex = 4;
             // 
+            // gradientPanel1
+            // 
+            gradientPanel1.BackColor = Color.FromArgb(42, 50, 120);
+            gradientPanel1.BorderStyle = BorderStyle.None;
+            gradientPanel1.Controls.Add(Time);
+            gradientPanel1.Controls.Add(MedleyName);
+            gradientPanel1.Dock = DockStyle.Top;
+            gradientPanel1.Location = new Point(0, 0);
+            gradientPanel1.Name = "gradientPanel1";
+            gradientPanel1.Size = new Size(1904, 96);
+            gradientPanel1.TabIndex = 8;
+            gradientPanel1.Paint += gradientPanel1_Paint;
+            // 
+            // Time
+            // 
+            Time.AutoSize = true;
+            Time.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Time.ForeColor = Color.Snow;
+            Time.Location = new Point(1559, 31);
+            Time.Name = "Time";
+            Time.Size = new Size(308, 32);
+            Time.TabIndex = 5;
+            Time.Text = "Sun, 19 May, 2024, 6:40 PM";
+            Time.Click += Time_Click;
+            // 
+            // MedleyName
+            // 
+            MedleyName.AutoSize = true;
+            MedleyName.BackColor = Color.Transparent;
+            MedleyName.Font = new Font("Goudy Old Style", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MedleyName.ForeColor = Color.Snow;
+            MedleyName.Location = new Point(31, 22);
+            MedleyName.Name = "MedleyName";
+            MedleyName.Size = new Size(214, 55);
+            MedleyName.TabIndex = 4;
+            MedleyName.Text = "MEDLEY";
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -540,8 +573,8 @@
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1904, 1008);
             Controls.Add(menuContainer);
-            Controls.Add(Cust);
             Controls.Add(DashboardPanel);
+            Controls.Add(gradientPanel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             Name = "Dashboard";
@@ -565,11 +598,13 @@
             QuickAccessBar.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)gradientPanel1).EndInit();
+            gradientPanel1.ResumeLayout(false);
+            gradientPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-        private NavigationBar Cust;
         private Button Accounts;
         private Button Billing;
         private Button Inventory;
@@ -602,5 +637,8 @@
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel5;
         private Syncfusion.Windows.Forms.Tools.AutoLabel Revenue;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel4;
+        private Syncfusion.Windows.Forms.Tools.GradientPanel gradientPanel1;
+        private Label MedleyName;
+        private Label Time;
     }
 }

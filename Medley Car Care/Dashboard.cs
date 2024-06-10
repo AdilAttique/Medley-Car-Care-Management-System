@@ -1,4 +1,5 @@
-﻿using Syncfusion.Windows.Converters;
+﻿using Microsoft.Win32;
+using Syncfusion.Windows.Converters;
 using Syncfusion.Windows.Tools;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,11 @@ namespace Medley_Car_Care
 {
     public partial class Dashboard : Form
     {
+        System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
         public Dashboard()
         {
             InitializeComponent();
+            InitializeTimer();
 
         }
 
@@ -38,6 +41,13 @@ namespace Medley_Car_Care
             childForm.MdiParent = this;
             childForm.Dock = DockStyle.Fill;
             childForm.Show();
+        }
+
+        private void InitializeTimer()
+        {
+            timer1.Interval = 1000;
+            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Start();
         }
 
         private void NavBar_Paint(object sender, PaintEventArgs e)
@@ -198,6 +208,21 @@ namespace Medley_Car_Care
         private void menuContainer_Paint(object sender, PaintEventArgs e)
         {
             this.Dboard.BackColor = Color.DarkBlue;
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Time.Text = DateTime.Now.ToString("ddd, dd MMM, yyyy h:mm tt");
+        }
+
+        private void Time_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
