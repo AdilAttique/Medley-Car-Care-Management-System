@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            Syncfusion.Windows.Forms.Chart.ChartCustomPoint chartCustomPoint2 = new Syncfusion.Windows.Forms.Chart.ChartCustomPoint();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3dItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            Syncfusion.Windows.Forms.Chart.ChartCustomPoint chartCustomPoint1 = new Syncfusion.Windows.Forms.Chart.ChartCustomPoint();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3dItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             Cust = new NavigationBar();
             Accounts = new Button();
             menuContainer = new FlowLayoutPanel();
@@ -394,8 +394,8 @@
             DataGraph.ChartArea.CursorLocation = new Point(0, 0);
             DataGraph.ChartArea.CursorReDraw = false;
             DataGraph.ChartArea.YAxesLayoutMode = Syncfusion.Windows.Forms.Chart.ChartAxesLayoutMode.SideBySide;
-            chartCustomPoint2.Font.Facename = "Segoe UI";
-            DataGraph.CustomPoints.Add(chartCustomPoint2);
+            chartCustomPoint1.Font.Facename = "Segoe UI";
+            DataGraph.CustomPoints.Add(chartCustomPoint1);
             DataGraph.IsWindowLess = false;
             // 
             // 
@@ -416,16 +416,16 @@
             DataGraph.Title.Name = "Default";
             DataGraph.ToolBar.BackColor = Color.SlateGray;
             DataGraph.ToolBar.EnableDefaultItems = false;
-            DataGraph.ToolBar.Items.Add(chartToolBarSaveItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarCopyItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarPrintItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarSplitter2);
-            DataGraph.ToolBar.Items.Add(chartToolBarPaletteItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarStyleItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarTypeItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarSeries3dItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarShowLegendItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarSaveItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarCopyItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarPrintItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarSplitter1);
+            DataGraph.ToolBar.Items.Add(chartToolBarPaletteItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarStyleItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarTypeItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarSeries3dItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             DataGraph.VisualTheme = "";
             DataGraph.Zooming.Border.BackColor = Color.Transparent;
             // 
