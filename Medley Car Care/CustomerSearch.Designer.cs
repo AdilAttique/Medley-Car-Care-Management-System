@@ -30,38 +30,52 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerSearch));
             panel1 = new Panel();
-            button3 = new Button();
-            textBox4 = new TextBox();
+            customerdgv = new DataGridView();
+            searchbtn = new Button();
+            search = new TextBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)customerdgv).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(customerdgv);
+            panel1.Controls.Add(searchbtn);
+            panel1.Controls.Add(search);
             panel1.Location = new Point(291, 105);
             panel1.Name = "panel1";
             panel1.Size = new Size(1097, 708);
             panel1.TabIndex = 1;
             // 
-            // button3
+            // customerdgv
             // 
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(334, 29);
-            button3.Name = "button3";
-            button3.Size = new Size(36, 29);
-            button3.TabIndex = 7;
-            button3.UseVisualStyleBackColor = true;
+            customerdgv.AllowUserToOrderColumns = true;
+            customerdgv.BackgroundColor = SystemColors.ButtonHighlight;
+            customerdgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            customerdgv.Location = new Point(0, 86);
+            customerdgv.Name = "customerdgv";
+            customerdgv.Size = new Size(1097, 619);
+            customerdgv.TabIndex = 8;
             // 
-            // textBox4
+            // searchbtn
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(46, 28);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Search here";
-            textBox4.Size = new Size(282, 29);
-            textBox4.TabIndex = 6;
+            searchbtn.Image = (Image)resources.GetObject("searchbtn.Image");
+            searchbtn.Location = new Point(334, 28);
+            searchbtn.Name = "searchbtn";
+            searchbtn.Size = new Size(36, 29);
+            searchbtn.TabIndex = 7;
+            searchbtn.UseVisualStyleBackColor = true;
+            searchbtn.Click += searchbtn_Click;
+            // 
+            // search
+            // 
+            search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            search.Location = new Point(46, 28);
+            search.Name = "search";
+            search.PlaceholderText = "Search here";
+            search.Size = new Size(282, 29);
+            search.TabIndex = 6;
             // 
             // CustomerSearch
             // 
@@ -71,15 +85,18 @@
             Controls.Add(panel1);
             Name = "CustomerSearch";
             Size = new Size(1678, 919);
+            Load += CustomerSearch_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)customerdgv).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Button button3;
-        private TextBox textBox4;
+        private Button searchbtn;
+        private TextBox search;
+        private DataGridView customerdgv;
     }
 }
