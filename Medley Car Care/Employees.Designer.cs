@@ -31,14 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             menu1 = new Menu();
             navigationBar1 = new NavigationBar();
-            panel1 = new Panel();
-            InvNavBar = new Panel();
-            UpdateButton = new Button();
-            StockButton = new Button();
-            InvSearchButton = new Button();
+            EmpSearchButton = new Button();
+            EmployeeList = new Button();
+            AddNewEmp = new Button();
+            EmployeeNavBar = new Panel();
             mainPanel = new Panel();
-            panel1.SuspendLayout();
-            InvNavBar.SuspendLayout();
+            EmployeeNavBar.SuspendLayout();
             SuspendLayout();
             // 
             // menu1
@@ -56,114 +54,109 @@
             navigationBar1.Size = new Size(1920, 94);
             navigationBar1.TabIndex = 5;
             // 
-            // panel1
+            // EmpSearchButton
             // 
-            panel1.BackColor = Color.Lavender;
-            panel1.Controls.Add(InvNavBar);
-            panel1.Controls.Add(mainPanel);
-            panel1.Location = new Point(242, 93);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1678, 919);
-            panel1.TabIndex = 7;
+            EmpSearchButton.BackColor = Color.DarkBlue;
+            EmpSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
+            EmpSearchButton.Dock = DockStyle.Left;
+            EmpSearchButton.FlatAppearance.BorderSize = 0;
+            EmpSearchButton.FlatStyle = FlatStyle.Flat;
+            EmpSearchButton.Font = new Font("Bahnschrift", 14.25F);
+            EmpSearchButton.ForeColor = Color.Snow;
+            EmpSearchButton.Image = (Image)resources.GetObject("EmpSearchButton.Image");
+            EmpSearchButton.ImageAlign = ContentAlignment.MiddleLeft;
+            EmpSearchButton.Location = new Point(0, 0);
+            EmpSearchButton.Margin = new Padding(3, 40, 3, 3);
+            EmpSearchButton.Name = "EmpSearchButton";
+            EmpSearchButton.Padding = new Padding(30, 0, 0, 0);
+            EmpSearchButton.Size = new Size(244, 67);
+            EmpSearchButton.TabIndex = 6;
+            EmpSearchButton.Text = "      Search";
+            EmpSearchButton.TextAlign = ContentAlignment.MiddleLeft;
+            EmpSearchButton.UseVisualStyleBackColor = false;
+            EmpSearchButton.Click += EmpSearchButton_Click;
             // 
-            // InvNavBar
+            // EmployeeList
             // 
-            InvNavBar.BackColor = Color.DarkBlue;
-            InvNavBar.Controls.Add(UpdateButton);
-            InvNavBar.Controls.Add(StockButton);
-            InvNavBar.Controls.Add(InvSearchButton);
-            InvNavBar.Dock = DockStyle.Top;
-            InvNavBar.Location = new Point(0, 0);
-            InvNavBar.Margin = new Padding(0);
-            InvNavBar.Name = "InvNavBar";
-            InvNavBar.Size = new Size(1678, 67);
-            InvNavBar.TabIndex = 0;
+            EmployeeList.BackColor = Color.DarkBlue;
+            EmployeeList.BackgroundImageLayout = ImageLayout.Zoom;
+            EmployeeList.Dock = DockStyle.Left;
+            EmployeeList.FlatAppearance.BorderSize = 0;
+            EmployeeList.FlatStyle = FlatStyle.Flat;
+            EmployeeList.Font = new Font("Bahnschrift", 14.25F);
+            EmployeeList.ForeColor = Color.Snow;
+            EmployeeList.Image = (Image)resources.GetObject("EmployeeList.Image");
+            EmployeeList.ImageAlign = ContentAlignment.MiddleLeft;
+            EmployeeList.Location = new Point(244, 0);
+            EmployeeList.Margin = new Padding(3, 40, 3, 3);
+            EmployeeList.Name = "EmployeeList";
+            EmployeeList.Padding = new Padding(30, 0, 0, 0);
+            EmployeeList.Size = new Size(244, 67);
+            EmployeeList.TabIndex = 7;
+            EmployeeList.Text = "      List";
+            EmployeeList.TextAlign = ContentAlignment.MiddleLeft;
+            EmployeeList.UseVisualStyleBackColor = false;
+            EmployeeList.Click += EmployeeList_Click;
             // 
-            // UpdateButton
+            // AddNewEmp
             // 
-            UpdateButton.BackColor = Color.DarkBlue;
-            UpdateButton.BackgroundImageLayout = ImageLayout.Zoom;
-            UpdateButton.Dock = DockStyle.Left;
-            UpdateButton.FlatAppearance.BorderSize = 0;
-            UpdateButton.FlatStyle = FlatStyle.Flat;
-            UpdateButton.Font = new Font("Bahnschrift", 14.25F);
-            UpdateButton.ForeColor = Color.Snow;
-            UpdateButton.Image = (Image)resources.GetObject("UpdateButton.Image");
-            UpdateButton.ImageAlign = ContentAlignment.MiddleLeft;
-            UpdateButton.Location = new Point(488, 0);
-            UpdateButton.Margin = new Padding(3, 40, 3, 3);
-            UpdateButton.Name = "UpdateButton";
-            UpdateButton.Padding = new Padding(30, 0, 0, 0);
-            UpdateButton.Size = new Size(244, 67);
-            UpdateButton.TabIndex = 8;
-            UpdateButton.Text = "      Update";
-            UpdateButton.TextAlign = ContentAlignment.MiddleLeft;
-            UpdateButton.UseVisualStyleBackColor = false;
+            AddNewEmp.BackColor = Color.DarkBlue;
+            AddNewEmp.BackgroundImageLayout = ImageLayout.Zoom;
+            AddNewEmp.Dock = DockStyle.Left;
+            AddNewEmp.FlatAppearance.BorderSize = 0;
+            AddNewEmp.FlatStyle = FlatStyle.Flat;
+            AddNewEmp.Font = new Font("Bahnschrift", 14.25F);
+            AddNewEmp.ForeColor = Color.Snow;
+            AddNewEmp.Image = (Image)resources.GetObject("AddNewEmp.Image");
+            AddNewEmp.ImageAlign = ContentAlignment.MiddleLeft;
+            AddNewEmp.Location = new Point(488, 0);
+            AddNewEmp.Margin = new Padding(3, 40, 3, 3);
+            AddNewEmp.Name = "AddNewEmp";
+            AddNewEmp.Padding = new Padding(30, 0, 0, 0);
+            AddNewEmp.Size = new Size(244, 67);
+            AddNewEmp.TabIndex = 8;
+            AddNewEmp.Text = "      Add New";
+            AddNewEmp.TextAlign = ContentAlignment.MiddleLeft;
+            AddNewEmp.UseVisualStyleBackColor = false;
+            AddNewEmp.Click += AddNewEmp_Click;
             // 
-            // StockButton
+            // EmployeeNavBar
             // 
-            StockButton.BackColor = Color.DarkBlue;
-            StockButton.BackgroundImageLayout = ImageLayout.Zoom;
-            StockButton.Dock = DockStyle.Left;
-            StockButton.FlatAppearance.BorderSize = 0;
-            StockButton.FlatStyle = FlatStyle.Flat;
-            StockButton.Font = new Font("Bahnschrift", 14.25F);
-            StockButton.ForeColor = Color.Snow;
-            StockButton.Image = (Image)resources.GetObject("StockButton.Image");
-            StockButton.ImageAlign = ContentAlignment.MiddleLeft;
-            StockButton.Location = new Point(244, 0);
-            StockButton.Margin = new Padding(3, 40, 3, 3);
-            StockButton.Name = "StockButton";
-            StockButton.Padding = new Padding(30, 0, 0, 0);
-            StockButton.Size = new Size(244, 67);
-            StockButton.TabIndex = 7;
-            StockButton.Text = "      Stock";
-            StockButton.TextAlign = ContentAlignment.MiddleLeft;
-            StockButton.UseVisualStyleBackColor = false;
-            // 
-            // InvSearchButton
-            // 
-            InvSearchButton.BackColor = Color.DarkBlue;
-            InvSearchButton.BackgroundImageLayout = ImageLayout.Zoom;
-            InvSearchButton.Dock = DockStyle.Left;
-            InvSearchButton.FlatAppearance.BorderSize = 0;
-            InvSearchButton.FlatStyle = FlatStyle.Flat;
-            InvSearchButton.Font = new Font("Bahnschrift", 14.25F);
-            InvSearchButton.ForeColor = Color.Snow;
-            InvSearchButton.Image = (Image)resources.GetObject("InvSearchButton.Image");
-            InvSearchButton.ImageAlign = ContentAlignment.MiddleLeft;
-            InvSearchButton.Location = new Point(0, 0);
-            InvSearchButton.Margin = new Padding(3, 40, 3, 3);
-            InvSearchButton.Name = "InvSearchButton";
-            InvSearchButton.Padding = new Padding(30, 0, 0, 0);
-            InvSearchButton.Size = new Size(244, 67);
-            InvSearchButton.TabIndex = 6;
-            InvSearchButton.Text = "      Search";
-            InvSearchButton.TextAlign = ContentAlignment.MiddleLeft;
-            InvSearchButton.UseVisualStyleBackColor = false;
+            EmployeeNavBar.BackColor = Color.DarkBlue;
+            EmployeeNavBar.Controls.Add(AddNewEmp);
+            EmployeeNavBar.Controls.Add(EmployeeList);
+            EmployeeNavBar.Controls.Add(EmpSearchButton);
+            EmployeeNavBar.Dock = DockStyle.Top;
+            EmployeeNavBar.Location = new Point(0, 0);
+            EmployeeNavBar.Margin = new Padding(0);
+            EmployeeNavBar.Name = "EmployeeNavBar";
+            EmployeeNavBar.Size = new Size(1904, 67);
+            EmployeeNavBar.TabIndex = 7;
             // 
             // mainPanel
             // 
             mainPanel.BackColor = Color.GhostWhite;
-            mainPanel.Dock = DockStyle.Bottom;
-            mainPanel.Location = new Point(0, 66);
+            mainPanel.Dock = DockStyle.Fill;
+            mainPanel.Location = new Point(0, 67);
+            mainPanel.Margin = new Padding(0);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1678, 853);
-            mainPanel.TabIndex = 1;
+            mainPanel.Size = new Size(1904, 934);
+            mainPanel.TabIndex = 8;
             // 
             // Employees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1904, 1001);
-            Controls.Add(panel1);
+            Controls.Add(mainPanel);
+            Controls.Add(EmployeeNavBar);
             Controls.Add(menu1);
             Controls.Add(navigationBar1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Employees";
             Text = "Employees";
             Load += Employees_Load;
-            panel1.ResumeLayout(false);
-            InvNavBar.ResumeLayout(false);
+            EmployeeNavBar.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -171,11 +164,10 @@
 
         private Menu menu1;
         private NavigationBar navigationBar1;
-        private Panel panel1;
-        private Panel InvNavBar;
-        private Button UpdateButton;
-        private Button StockButton;
-        private Button InvSearchButton;
+        private Button EmpSearchButton;
+        private Button EmployeeList;
+        private Button AddNewEmp;
+        private Panel EmployeeNavBar;
         private Panel mainPanel;
     }
 }

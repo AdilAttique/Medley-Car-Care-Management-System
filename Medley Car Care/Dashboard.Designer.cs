@@ -121,9 +121,10 @@
             menuContainer.Controls.Add(Customers);
             menuContainer.Controls.Add(Employees);
             menuContainer.Controls.Add(LogOut);
-            menuContainer.Location = new Point(0, 93);
+            menuContainer.Dock = DockStyle.Left;
+            menuContainer.Location = new Point(0, 96);
             menuContainer.Name = "menuContainer";
-            menuContainer.Size = new Size(245, 968);
+            menuContainer.Size = new Size(251, 912);
             menuContainer.TabIndex = 4;
             menuContainer.Paint += menuContainer_Paint;
             // 
@@ -283,14 +284,14 @@
             DashboardPanel.Controls.Add(panel1, 0, 0);
             DashboardPanel.Controls.Add(panel3, 0, 2);
             DashboardPanel.Controls.Add(panel2, 0, 1);
-            DashboardPanel.Location = new Point(242, 93);
+            DashboardPanel.Location = new Point(244, 96);
             DashboardPanel.Name = "DashboardPanel";
             DashboardPanel.Padding = new Padding(150, 30, 50, 50);
             DashboardPanel.RowCount = 3;
             DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            DashboardPanel.Size = new Size(1678, 919);
+            DashboardPanel.Size = new Size(1676, 916);
             DashboardPanel.TabIndex = 6;
             DashboardPanel.Paint += tableLayoutPanel1_Paint_1;
             // 
@@ -378,9 +379,9 @@
             // panel3
             // 
             panel3.Controls.Add(DataGraph);
-            panel3.Location = new Point(153, 591);
+            panel3.Location = new Point(153, 589);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1472, 258);
+            panel3.Size = new Size(1470, 258);
             panel3.TabIndex = 4;
             // 
             // DataGraph
@@ -428,9 +429,9 @@
             // panel2
             // 
             panel2.Controls.Add(tabControl1);
-            panel2.Location = new Point(153, 312);
+            panel2.Location = new Point(153, 311);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1472, 258);
+            panel2.Size = new Size(1470, 258);
             panel2.TabIndex = 3;
             // 
             // tabControl1

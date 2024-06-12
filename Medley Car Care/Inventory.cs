@@ -19,8 +19,8 @@ namespace Medley_Car_Care
         public Inventory()
         {
             InitializeComponent();
-        }
 
+        }
         private void menu1_Load(object sender, EventArgs e)
         {
 
@@ -51,6 +51,7 @@ namespace Medley_Car_Care
         {
             this.InvSearchButton.BackColor = Color.MediumBlue;
             ShowUserControl(userControl1);
+
         }
 
         private void StockButton_Click(object sender, EventArgs e)
@@ -72,6 +73,11 @@ namespace Medley_Car_Care
             this.StockButton.BackColor = Color.DarkBlue;
             this.UpdateButton.BackColor = Color.MediumBlue;
             ShowUserControl(userControl3);
+        }
+
+        private void InvNavBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

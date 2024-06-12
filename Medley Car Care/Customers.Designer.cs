@@ -44,9 +44,11 @@
             panel1.BackColor = Color.Lavender;
             panel1.Controls.Add(CustomerNavBar);
             panel1.Controls.Add(mainPanel);
-            panel1.Location = new Point(242, 93);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1678, 919);
+            panel1.Size = new Size(1904, 1001);
             panel1.TabIndex = 1;
             // 
             // CustomerNavBar
@@ -59,7 +61,7 @@
             CustomerNavBar.Location = new Point(0, 0);
             CustomerNavBar.Margin = new Padding(0);
             CustomerNavBar.Name = "CustomerNavBar";
-            CustomerNavBar.Size = new Size(1678, 67);
+            CustomerNavBar.Size = new Size(1904, 67);
             CustomerNavBar.TabIndex = 0;
             // 
             // AddNew
@@ -131,10 +133,11 @@
             // mainPanel
             // 
             mainPanel.BackColor = Color.GhostWhite;
-            mainPanel.Dock = DockStyle.Bottom;
-            mainPanel.Location = new Point(0, 66);
+            mainPanel.Dock = DockStyle.Fill;
+            mainPanel.Location = new Point(0, 0);
+            mainPanel.Margin = new Padding(0);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1678, 853);
+            mainPanel.Size = new Size(1904, 1001);
             mainPanel.TabIndex = 1;
             // 
             // Customers
