@@ -1,4 +1,5 @@
-﻿using Syncfusion.Windows.Forms.Tools;
+﻿using Syncfusion.UI.Xaml.Diagram;
+using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,6 @@ namespace Medley_Car_Care
 {
     public partial class Billing : Form
     {
-        UserControl calculator = new Calculator();
         public Billing()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace Medley_Car_Care
                 }
             }*/
 
-            
+
         }
 
         private void Billing_Load(object sender, EventArgs e)
@@ -78,17 +78,51 @@ namespace Medley_Car_Care
 
         private void TotalAmountBox_TextChanged(object sender, EventArgs e)
         {
-
+            NetAmountBox.Text = TotalAmountBox.Text;
         }
 
         private void NetAmountBox_TextChanged(object sender, EventArgs e)
         {
+            /* if (TotalAmountBox.Text.Length > 0 && DiscountBox.Text.Length > 0)
+             {
+                 double a = double.Parse(TotalAmountBox.Text), b = double.Parse(DiscountBox.Text);
+                 double result = a - b;
+                 NetAmountBox.Text = result.ToString();
+             }
+             else if (TotalAmountBox.Text.Length > 0)
+             {
 
+             }*/
         }
 
         private void CalculatorButton_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void DiscountBox_TextChanged(object sender, EventArgs e)
+        {
+            if (TotalAmountBox.Text.Length > 0 && DiscountBox.Text.Length > 0)
+            {
+                double a = double.Parse(TotalAmountBox.Text), b = double.Parse(DiscountBox.Text);
+                double result = a - b;
+                NetAmountBox.Text = result.ToString();
+            }
+        }
+
+        private void BalanceBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReceivedBox_TextChanged(object sender, EventArgs e)
+        {
+            if (ReceivedBox.Text.Length > 0 && NetAmountBox.Text.Length > 0)
+            {
+                double c = double.Parse(NetAmountBox.Text), d = double.Parse(ReceivedBox.Text);
+                double Result = d - c;
+                BalanceBox.Text = Result.ToString();
+            }
         }
     }
 }

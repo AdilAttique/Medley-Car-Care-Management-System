@@ -41,7 +41,7 @@
             CheckoutButton = new Button();
             BalanceBox = new TextBox();
             BalanceText = new Label();
-            textBox1 = new TextBox();
+            ReceivedBox = new TextBox();
             RecievedText = new Label();
             NetAmountBox = new TextBox();
             NetAmountText = new Label();
@@ -141,7 +141,7 @@
             panel22.Controls.Add(CheckoutButton);
             panel22.Controls.Add(BalanceBox);
             panel22.Controls.Add(BalanceText);
-            panel22.Controls.Add(textBox1);
+            panel22.Controls.Add(ReceivedBox);
             panel22.Controls.Add(RecievedText);
             panel22.Controls.Add(NetAmountBox);
             panel22.Controls.Add(NetAmountText);
@@ -249,8 +249,10 @@
             BalanceBox.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BalanceBox.Location = new Point(1333, 19);
             BalanceBox.Name = "BalanceBox";
+            BalanceBox.ReadOnly = true;
             BalanceBox.Size = new Size(153, 43);
             BalanceBox.TabIndex = 9;
+            BalanceBox.TextChanged += BalanceBox_TextChanged;
             // 
             // BalanceText
             // 
@@ -262,13 +264,14 @@
             BalanceText.TabIndex = 8;
             BalanceText.Text = "Balance";
             // 
-            // textBox1
+            // ReceivedBox
             // 
-            textBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(1054, 19);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(153, 43);
-            textBox1.TabIndex = 7;
+            ReceivedBox.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ReceivedBox.Location = new Point(1054, 19);
+            ReceivedBox.Name = "ReceivedBox";
+            ReceivedBox.Size = new Size(153, 43);
+            ReceivedBox.TabIndex = 7;
+            ReceivedBox.TextChanged += ReceivedBox_TextChanged;
             // 
             // RecievedText
             // 
@@ -285,6 +288,7 @@
             NetAmountBox.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NetAmountBox.Location = new Point(765, 19);
             NetAmountBox.Name = "NetAmountBox";
+            NetAmountBox.ReadOnly = true;
             NetAmountBox.Size = new Size(153, 43);
             NetAmountBox.TabIndex = 5;
             NetAmountBox.TextChanged += NetAmountBox_TextChanged;
@@ -306,6 +310,7 @@
             DiscountBox.Name = "DiscountBox";
             DiscountBox.Size = new Size(153, 43);
             DiscountBox.TabIndex = 3;
+            DiscountBox.TextChanged += DiscountBox_TextChanged;
             // 
             // DiscountText
             // 
@@ -911,7 +916,7 @@
         private Label TotalAmountText;
         private TextBox BalanceBox;
         private Label BalanceText;
-        private TextBox textBox1;
+        private TextBox ReceivedBox;
         private Label RecievedText;
         private Button SearchCustomerButton;
         private Button CheckoutButton;
