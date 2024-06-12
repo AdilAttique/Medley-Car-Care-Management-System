@@ -117,4 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="AddAccounts.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAALdJREFUSEvtlT0OwjAMhTPBLbgmgi6MXAm4SW+QH0XJBlPIQ0Ze3CqqM1DUT4rk
+        uPZ76fTM/xFjPHiX796mV3C5LD3Yhw70SJqpHx7BplMpZUetRWA/uHSGEbUYvEBr8GUcyx56dGXwq1R2
+        QdRrNakvPFI5i8pENbeZTPE7Jt7mC3qtB/O0+gE9KhmxKaCa20ymWIXJlcpZVCatiHq986QG15OuDJIM
+        idYpGQcxGTtn/E3M+JVjzBtN5KjYxXI6YgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="CurrAccoutsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DgAACw4BQL7hQQAAAYJJREFUSEvtlr0vBGEQh49Eh0jQ+wNQ+kgoJHqhEo1eFIJCo6OQSJQ6iULUEo1C
+        e9QKhUbD7ft1+35cp1m/d43EJXvMXmx3T3K5m9nJ++xk5jZb08rVjfJZVZ94fi3+qFVIfn5PwqUrCepb
+        UspBCv+klMQkflZLf6Sl+zDSnRrjZujSr7AlWvs9rOKTkX4zlWFBa7cB2TNk21TSEZbEWjtilBP+zY9S
+        KscmdgKduUYjjFOqEJbECD+HLh4pbEMrf2eEW6awEF4nuOPYidZ6iFKlYEki6OQizkQpt26MGaY0C7Yk
+        y7I+I+0aBn2LOXgIH/C9z1lltuQnEA4oFRaxaVeYyeu/DD4Vralm0pqksA10dIlVPqCwEJakqfwuas4p
+        bAP5HUjOKCyEJYmdYLuS8B7GKJXzNSd/r0VYoVQhLEkEQz7G0F9w11tN4eeNCKuIbyC5hqyfygphSyKp
+        SKfR0WH+7FLuRGu7FLuhyx0pJfkG9dU9hbulJylFfj7+tRW/d7n6JxrpVKVO86KlAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

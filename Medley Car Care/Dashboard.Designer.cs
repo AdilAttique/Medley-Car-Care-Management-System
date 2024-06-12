@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            Syncfusion.Windows.Forms.Chart.ChartCustomPoint chartCustomPoint2 = new Syncfusion.Windows.Forms.Chart.ChartCustomPoint();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3dItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            Syncfusion.Windows.Forms.Chart.ChartCustomPoint chartCustomPoint1 = new Syncfusion.Windows.Forms.Chart.ChartCustomPoint();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3dItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             Accounts = new Button();
             menuContainer = new FlowLayoutPanel();
             Dboard = new Button();
@@ -121,9 +121,10 @@
             menuContainer.Controls.Add(Customers);
             menuContainer.Controls.Add(Employees);
             menuContainer.Controls.Add(LogOut);
-            menuContainer.Location = new Point(0, 93);
+            menuContainer.Dock = DockStyle.Left;
+            menuContainer.Location = new Point(0, 96);
             menuContainer.Name = "menuContainer";
-            menuContainer.Size = new Size(245, 968);
+            menuContainer.Size = new Size(251, 912);
             menuContainer.TabIndex = 4;
             menuContainer.Paint += menuContainer_Paint;
             // 
@@ -283,14 +284,14 @@
             DashboardPanel.Controls.Add(panel1, 0, 0);
             DashboardPanel.Controls.Add(panel3, 0, 2);
             DashboardPanel.Controls.Add(panel2, 0, 1);
-            DashboardPanel.Location = new Point(242, 93);
+            DashboardPanel.Location = new Point(244, 96);
             DashboardPanel.Name = "DashboardPanel";
             DashboardPanel.Padding = new Padding(150, 30, 50, 50);
             DashboardPanel.RowCount = 3;
             DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             DashboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            DashboardPanel.Size = new Size(1678, 919);
+            DashboardPanel.Size = new Size(1676, 916);
             DashboardPanel.TabIndex = 6;
             DashboardPanel.Paint += tableLayoutPanel1_Paint_1;
             // 
@@ -378,9 +379,9 @@
             // panel3
             // 
             panel3.Controls.Add(DataGraph);
-            panel3.Location = new Point(153, 591);
+            panel3.Location = new Point(153, 589);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1472, 258);
+            panel3.Size = new Size(1470, 258);
             panel3.TabIndex = 4;
             // 
             // DataGraph
@@ -390,8 +391,8 @@
             DataGraph.ChartArea.CursorLocation = new Point(0, 0);
             DataGraph.ChartArea.CursorReDraw = false;
             DataGraph.ChartArea.YAxesLayoutMode = Syncfusion.Windows.Forms.Chart.ChartAxesLayoutMode.SideBySide;
-            chartCustomPoint2.Font.Facename = "Segoe UI";
-            DataGraph.CustomPoints.Add(chartCustomPoint2);
+            chartCustomPoint1.Font.Facename = "Segoe UI";
+            DataGraph.CustomPoints.Add(chartCustomPoint1);
             DataGraph.IsWindowLess = false;
             // 
             // 
@@ -412,25 +413,25 @@
             DataGraph.Title.Name = "Default";
             DataGraph.ToolBar.BackColor = Color.SlateGray;
             DataGraph.ToolBar.EnableDefaultItems = false;
-            DataGraph.ToolBar.Items.Add(chartToolBarSaveItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarCopyItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarPrintItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarSplitter2);
-            DataGraph.ToolBar.Items.Add(chartToolBarPaletteItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarStyleItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarTypeItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarSeries3dItem2);
-            DataGraph.ToolBar.Items.Add(chartToolBarShowLegendItem2);
+            DataGraph.ToolBar.Items.Add(chartToolBarSaveItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarCopyItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarPrintItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarSplitter1);
+            DataGraph.ToolBar.Items.Add(chartToolBarPaletteItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarStyleItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarTypeItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarSeries3dItem1);
+            DataGraph.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             DataGraph.VisualTheme = "";
             DataGraph.Zooming.Border.BackColor = Color.Transparent;
             // 
             // panel2
             // 
             panel2.Controls.Add(tabControl1);
-            panel2.Location = new Point(153, 312);
+            panel2.Location = new Point(153, 311);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1472, 258);
+            panel2.Size = new Size(1470, 258);
             panel2.TabIndex = 3;
             // 
             // tabControl1

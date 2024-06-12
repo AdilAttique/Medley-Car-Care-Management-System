@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             panel1 = new Panel();
-            mainPanel = new Panel();
             InvNavBar = new Panel();
             UpdateButton = new Button();
             StockButton = new Button();
             InvSearchButton = new Button();
+            mainPanel = new Panel();
             panel1.SuspendLayout();
             InvNavBar.SuspendLayout();
             SuspendLayout();
@@ -44,21 +44,12 @@
             panel1.BackColor = Color.Lavender;
             panel1.Controls.Add(InvNavBar);
             panel1.Controls.Add(mainPanel);
-            panel1.Location = new Point(242, 93);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1678, 919);
+            panel1.Size = new Size(1904, 1008);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
-            // 
-            // mainPanel
-            // 
-            mainPanel.BackColor = Color.GhostWhite;
-            mainPanel.Dock = DockStyle.Bottom;
-            mainPanel.Location = new Point(0, 66);
-            mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1678, 853);
-            mainPanel.TabIndex = 1;
-            mainPanel.Paint += panel2_Paint;
             // 
             // InvNavBar
             // 
@@ -70,8 +61,9 @@
             InvNavBar.Location = new Point(0, 0);
             InvNavBar.Margin = new Padding(0);
             InvNavBar.Name = "InvNavBar";
-            InvNavBar.Size = new Size(1678, 67);
+            InvNavBar.Size = new Size(1904, 62);
             InvNavBar.TabIndex = 0;
+            InvNavBar.Paint += InvNavBar_Paint;
             // 
             // UpdateButton
             // 
@@ -88,7 +80,7 @@
             UpdateButton.Margin = new Padding(3, 40, 3, 3);
             UpdateButton.Name = "UpdateButton";
             UpdateButton.Padding = new Padding(30, 0, 0, 0);
-            UpdateButton.Size = new Size(244, 67);
+            UpdateButton.Size = new Size(244, 62);
             UpdateButton.TabIndex = 8;
             UpdateButton.Text = "      Update";
             UpdateButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -110,7 +102,7 @@
             StockButton.Margin = new Padding(3, 40, 3, 3);
             StockButton.Name = "StockButton";
             StockButton.Padding = new Padding(30, 0, 0, 0);
-            StockButton.Size = new Size(244, 67);
+            StockButton.Size = new Size(244, 62);
             StockButton.TabIndex = 7;
             StockButton.Text = "      Stock";
             StockButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -132,12 +124,23 @@
             InvSearchButton.Margin = new Padding(3, 40, 3, 3);
             InvSearchButton.Name = "InvSearchButton";
             InvSearchButton.Padding = new Padding(30, 0, 0, 0);
-            InvSearchButton.Size = new Size(244, 67);
+            InvSearchButton.Size = new Size(244, 62);
             InvSearchButton.TabIndex = 6;
             InvSearchButton.Text = "      Search";
             InvSearchButton.TextAlign = ContentAlignment.MiddleLeft;
             InvSearchButton.UseVisualStyleBackColor = false;
             InvSearchButton.Click += InvSearchButton_Click;
+            // 
+            // mainPanel
+            // 
+            mainPanel.BackColor = Color.GhostWhite;
+            mainPanel.Dock = DockStyle.Fill;
+            mainPanel.Location = new Point(0, 0);
+            mainPanel.Margin = new Padding(0);
+            mainPanel.Name = "mainPanel";
+            mainPanel.Size = new Size(1904, 1008);
+            mainPanel.TabIndex = 1;
+            mainPanel.Paint += panel2_Paint;
             // 
             // Inventory
             // 

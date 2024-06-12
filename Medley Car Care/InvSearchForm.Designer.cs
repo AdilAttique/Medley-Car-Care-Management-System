@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvSearchForm));
             panel1 = new Panel();
-            Cust = new NavigationBar();
             button3 = new Button();
             textBox4 = new TextBox();
             panel1.SuspendLayout();
@@ -39,22 +38,12 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(Cust);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(textBox4);
             panel1.Location = new Point(274, 105);
             panel1.Name = "panel1";
             panel1.Size = new Size(1097, 708);
             panel1.TabIndex = 0;
-            // 
-            // Cust
-            // 
-            Cust.BackColor = Color.FromArgb(42, 50, 120);
-            Cust.Location = new Point(3, 160);
-            Cust.Name = "Cust";
-            Cust.Size = new Size(1920, 97);
-            Cust.TabIndex = 8;
-            Cust.Load += Cust_Load;
             // 
             // button3
             // 
@@ -94,6 +83,5 @@
         private Panel panel1;
         private Button button3;
         private TextBox textBox4;
-        private NavigationBar Cust;
     }
 }
