@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Medley_Car_Care
 {
-    public partial class Calculator : UserControl
+    public partial class Calculator : Form
     {
         public Calculator()
         {

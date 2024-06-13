@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.4.0" />
     <PackageReference Include="Syncfusion.Chart.Windows" Version="25.2.6" />
     <PackageReference Include="Syncfusion.SfChart.WPF" Version="25.2.6" />
     <PackageReference Include="Syncfusion.Shared.Base" Version="25.2.6" />

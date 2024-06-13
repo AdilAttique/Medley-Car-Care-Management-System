@@ -260,7 +260,7 @@
             LogOut.BackgroundImageLayout = ImageLayout.Zoom;
             LogOut.FlatAppearance.BorderSize = 0;
             LogOut.FlatStyle = FlatStyle.Flat;
-            LogOut.Font = new Font("Baskerville Old Face", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LogOut.Font = new Font("Bahnschrift", 14.25F);
             LogOut.ForeColor = Color.Snow;
             LogOut.Image = (Image)resources.GetObject("LogOut.Image");
             LogOut.ImageAlign = ContentAlignment.MiddleLeft;
@@ -617,7 +617,6 @@
         private Button Reports;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel DashboardPanel;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand2;
         private Panel panel1;
         private TabControl tabControl1;
         private TabPage QuickAccessBar;

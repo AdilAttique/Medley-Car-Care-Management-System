@@ -2,12 +2,12 @@
 {
     partial class Calculator
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,46 +20,47 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            calculatorControl = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
+            calculatorControl1 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             SuspendLayout();
             // 
-            // calculatorControl
+            // calculatorControl1
             // 
-            calculatorControl.AccessibleDescription = "Calculator control";
-            calculatorControl.AccessibleName = "Calculator Control";
-            calculatorControl.BeforeTouchSize = new Size(404, 531);
-            calculatorControl.Culture = new System.Globalization.CultureInfo("en-US");
-            calculatorControl.DoubleValue = 0D;
-            calculatorControl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            calculatorControl.ForeColor = SystemColors.ControlText;
-            calculatorControl.Location = new Point(71, 16);
-            calculatorControl.MetroColor = Color.Black;
-            calculatorControl.Name = "calculatorControl";
-            calculatorControl.Size = new Size(404, 531);
-            calculatorControl.TabIndex = 0;
-            calculatorControl.Text = "CalculatorControl";
+            calculatorControl1.AccessibleDescription = "Calculator control";
+            calculatorControl1.AccessibleName = "Calculator Control";
+            calculatorControl1.BeforeTouchSize = new Size(497, 544);
+            calculatorControl1.Culture = new System.Globalization.CultureInfo("en-US");
+            calculatorControl1.DoubleValue = 0D;
+            calculatorControl1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            calculatorControl1.ForeColor = SystemColors.ControlText;
+            calculatorControl1.Location = new Point(73, 12);
+            calculatorControl1.MetroColor = Color.Black;
+            calculatorControl1.Name = "calculatorControl1";
+            calculatorControl1.Size = new Size(497, 544);
+            calculatorControl1.TabIndex = 0;
+            calculatorControl1.Text = "calculatorControl1";
             // 
             // Calculator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SkyBlue;
-            Controls.Add(calculatorControl);
+            ClientSize = new Size(654, 568);
+            Controls.Add(calculatorControl1);
             Name = "Calculator";
-            Size = new Size(559, 573);
+            Text = "Calculator";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Syncfusion.Windows.Forms.Tools.CalculatorControl calculatorControl;
+        private Syncfusion.Windows.Forms.Tools.CalculatorControl calculatorControl1;
     }
 }
