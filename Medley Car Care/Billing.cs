@@ -138,7 +138,7 @@ namespace Medley_Car_Care
         }
 
         private int rowcount = 2;
-        
+
         private void additemtotable_Click(object sender, EventArgs e)
         {
             string itemsearchedbarcode = ProductBarcodeBox.Text;
@@ -162,7 +162,7 @@ namespace Medley_Car_Care
                 tableLayoutPanel1.RowCount += 1;
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.AutoSize));
 
-                tableLayoutPanel1.Controls.Add(new Label { Text = (rowcount-1).ToString(), TextAlign = ContentAlignment.MiddleCenter }, 0, rowcount);
+                tableLayoutPanel1.Controls.Add(new Label { Text = (rowcount - 1).ToString(), TextAlign = ContentAlignment.MiddleCenter }, 0, rowcount);
                 tableLayoutPanel1.Controls.Add(new Label { Text = barcode, TextAlign = ContentAlignment.MiddleCenter }, 1, rowcount);
                 tableLayoutPanel1.Controls.Add(new Label { Text = name, TextAlign = ContentAlignment.MiddleCenter }, 2, rowcount);
                 tableLayoutPanel1.Controls.Add(new Label { Text = totalqtyinstock.ToString(), TextAlign = ContentAlignment.MiddleCenter }, 3, rowcount);
@@ -170,14 +170,14 @@ namespace Medley_Car_Care
                 tableLayoutPanel1.Controls.Add(new Label { Text = priceperunit.ToString(), TextAlign = ContentAlignment.MiddleCenter }, 5, rowcount);
                 tableLayoutPanel1.Controls.Add(new Label { Text = totalprice.ToString(), TextAlign = ContentAlignment.MiddleCenter }, 6, rowcount);
                 rowcount++;
-                
-                for(int i=2; i<tableLayoutPanel1.RowCount; i++)
+
+                for (int i = 2; i < tableLayoutPanel1.RowCount; i++)
                 {
                     Label netbill = (Label)tableLayoutPanel1.GetControlFromPosition(6, i);
-                    if(netbill != null)
+                    if (netbill != null)
                         netamount += float.Parse(netbill.Text);
                 }
-               
+
                 ProductBarcodeBox.Text = "";
                 ProductNameBox.Text = "";
                 itemquantity.Text = "";
@@ -281,6 +281,16 @@ namespace Medley_Car_Care
         }
 
         private void editableList1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReceivedBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DiscountBox_TextChanged(object sender, EventArgs e)
         {
 
         }

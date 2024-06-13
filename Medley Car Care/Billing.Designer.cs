@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billing));
-            Syncfusion.Windows.Forms.MetroColorTable metroColorTable1 = new Syncfusion.Windows.Forms.MetroColorTable();
+            Syncfusion.Windows.Forms.MetroColorTable metroColorTable2 = new Syncfusion.Windows.Forms.MetroColorTable();
             panel1 = new Panel();
             panel22 = new Panel();
             CalculatorButton = new Button();
@@ -258,7 +258,6 @@
             BalanceBox.ReadOnly = true;
             BalanceBox.Size = new Size(153, 43);
             BalanceBox.TabIndex = 9;
-            BalanceBox.TextChanged += BalanceBox_TextChanged;
             // 
             // BalanceText
             // 
@@ -572,7 +571,7 @@
             editableList1.ListBox.TabIndex = 0;
             editableList1.Location = new Point(52, 31);
             editableList1.Name = "editableList1";
-            editableList1.ScrollMetroColorTable = metroColorTable1;
+            editableList1.ScrollMetroColorTable = metroColorTable2;
             editableList1.Size = new Size(95, 14);
             editableList1.TabIndex = 7;
             // 
