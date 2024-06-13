@@ -115,12 +115,21 @@ namespace Medley_Car_Care
 
         private void TotalAmountBox_TextChanged(object sender, EventArgs e)
         {
-
+            NetAmountBox.Text = TotalAmountBox.Text;
         }
 
         private void NetAmountBox_TextChanged(object sender, EventArgs e)
         {
+            /* if (TotalAmountBox.Text.Length > 0 && DiscountBox.Text.Length > 0)
+             {
+                 double a = double.Parse(TotalAmountBox.Text), b = double.Parse(DiscountBox.Text);
+                 double result = a - b;
+                 NetAmountBox.Text = result.ToString();
+             }
+             else if (TotalAmountBox.Text.Length > 0)
+             {
 
+             }*/
         }
 
         private void CalculatorButton_Click(object sender, EventArgs e)
