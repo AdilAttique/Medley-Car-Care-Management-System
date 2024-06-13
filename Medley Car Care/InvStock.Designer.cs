@@ -29,59 +29,29 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            inventorydgv = new DataGridView();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)tabControlAdv1).BeginInit();
-            tabControlAdv1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)inventorydgv).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(tabControlAdv1);
+            panel1.Controls.Add(inventorydgv);
             panel1.Location = new Point(113, 80);
             panel1.Name = "panel1";
             panel1.Size = new Size(1349, 744);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // tabControlAdv1
+            // inventorydgv
             // 
-            tabControlAdv1.BackColor = Color.Silver;
-            tabControlAdv1.BeforeTouchSize = new Size(1145, 706);
-            tabControlAdv1.BorderStyle = BorderStyle.None;
-            tabControlAdv1.Controls.Add(tabPageAdv1);
-            tabControlAdv1.Controls.Add(tabPageAdv2);
-            tabControlAdv1.Location = new Point(0, 35);
-            tabControlAdv1.Name = "tabControlAdv1";
-            tabControlAdv1.Size = new Size(1145, 706);
-            tabControlAdv1.TabIndex = 0;
-            // 
-            // tabPageAdv1
-            // 
-            tabPageAdv1.Image = null;
-            tabPageAdv1.ImageSize = new Size(16, 16);
-            tabPageAdv1.Location = new Point(0, 26);
-            tabPageAdv1.Name = "tabPageAdv1";
-            tabPageAdv1.ShowCloseButton = true;
-            tabPageAdv1.Size = new Size(1145, 680);
-            tabPageAdv1.TabIndex = 1;
-            tabPageAdv1.Text = "tabPageAdv1";
-            tabPageAdv1.ThemesEnabled = false;
-            // 
-            // tabPageAdv2
-            // 
-            tabPageAdv2.Image = null;
-            tabPageAdv2.ImageSize = new Size(16, 16);
-            tabPageAdv2.Location = new Point(0, 26);
-            tabPageAdv2.Name = "tabPageAdv2";
-            tabPageAdv2.ShowCloseButton = true;
-            tabPageAdv2.Size = new Size(1145, 680);
-            tabPageAdv2.TabIndex = 2;
-            tabPageAdv2.Text = "tabPageAdv2";
-            tabPageAdv2.ThemesEnabled = false;
+            inventorydgv.BackgroundColor = SystemColors.Control;
+            inventorydgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            inventorydgv.Location = new Point(3, 3);
+            inventorydgv.Name = "inventorydgv";
+            inventorydgv.Size = new Size(1346, 741);
+            inventorydgv.TabIndex = 0;
             // 
             // InvStock
             // 
@@ -91,17 +61,15 @@
             Controls.Add(panel1);
             Name = "InvStock";
             Size = new Size(1678, 919);
+            Load += InvStock_Load;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)tabControlAdv1).EndInit();
-            tabControlAdv1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)inventorydgv).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv1;
-        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
-        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
+        private DataGridView inventorydgv;
     }
 }

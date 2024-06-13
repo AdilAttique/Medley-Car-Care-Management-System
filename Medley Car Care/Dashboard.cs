@@ -137,7 +137,7 @@ namespace Medley_Car_Care
             this.Employees.BackColor = Color.FromArgb(21, 25, 48);
         }
 
-        private void Customers_Click(object sender, EventArgs e)
+        public void Customers_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Customers());
             this.Customers.BackColor = Color.DarkBlue;
