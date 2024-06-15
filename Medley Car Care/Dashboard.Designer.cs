@@ -357,6 +357,7 @@
             Revenue.Size = new Size(56, 35);
             Revenue.TabIndex = 4;
             Revenue.Text = "Rs 0";
+            Revenue.Click += Revenue_Click;
             // 
             // autoLabel2
             // 

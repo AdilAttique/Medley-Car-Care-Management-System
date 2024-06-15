@@ -13,14 +13,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+
+
 namespace Medley_Car_Care
 {
 
     public partial class Billing : Form
     {
         SQL sql;
-        UserControl calculator = new Calculator();
-        public Billing()
+
+        //public int revenue { get; set; }
+
+    public Billing()
         {
             InitializeComponent();
             sql = new SQL();
@@ -139,6 +145,21 @@ namespace Medley_Car_Care
 
         private int rowcount = 2;
 
+        public void ManageQuantityInInventory(string BarCode, int qtytominus)
+        {
+            try
+            {
+
+
+                string query = "UPDATE Inventory SET QuantityInStock =(SELECT QuantityInStock from Inventory WHERE BarCode='" + BarCode + "')-" + qtytominus + " WHERE BarCode='" + BarCode + "';";
+
+                sql.ExecuetNonQuery(query);
+            }
+            catch (SqlException ex)
+            {
+                sql.ThrowException(ex);
+            }
+        }
         private void additemtotable_Click(object sender, EventArgs e)
         {
             string itemsearchedbarcode = ProductBarcodeBox.Text;
@@ -170,7 +191,7 @@ namespace Medley_Car_Care
                 tableLayoutPanel1.Controls.Add(new Label { Text = priceperunit.ToString(), TextAlign = ContentAlignment.MiddleCenter }, 5, rowcount);
                 tableLayoutPanel1.Controls.Add(new Label { Text = totalprice.ToString(), TextAlign = ContentAlignment.MiddleCenter }, 6, rowcount);
                 rowcount++;
-
+                ManageQuantityInInventory(barcode, qtyperunit);
                 for (int i = 2; i < tableLayoutPanel1.RowCount; i++)
                 {
                     Label netbill = (Label)tableLayoutPanel1.GetControlFromPosition(6, i);
@@ -204,15 +225,11 @@ namespace Medley_Car_Care
 
                 }
 
-                //ProductNameBox.TextChanged -= ProductNameBox_TextChanged;
                 ProductNameBox.Text = name;
-                //ProductNameBox.TextChanged += ProductNameBox_TextChanged;
             }
             else
             {
-                //ProductNameBox.TextChanged -= ProductNameBox_TextChanged;
                 ProductNameBox.Text = null;
-                //ProductNameBox.TextChanged += ProductNameBox_TextChanged;
             }
             sql.CloseConnection();
 
@@ -287,12 +304,74 @@ namespace Medley_Car_Care
 
         private void ReceivedBox_TextChanged(object sender, EventArgs e)
         {
+            if (ReceivedBox.Text.Length > 0 && NetAmountBox.Text.Length > 0)
+            {
+                double c = double.Parse(NetAmountBox.Text), d = double.Parse(ReceivedBox.Text);
+                double Result = d - c;
+                BalanceBox.Text = Result.ToString();
+            }
 
         }
 
         private void DiscountBox_TextChanged(object sender, EventArgs e)
         {
 
+            if (TotalAmountBox.Text.Length > 0 && DiscountBox.Text.Length > 0)
+            {
+                double a = double.Parse(TotalAmountBox.Text), b = double.Parse(DiscountBox.Text);
+                double result = a - b;
+                NetAmountBox.Text = result.ToString();
+            }
+        }
+
+        private void CheckoutButton_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TotalAmountBox.Text))
+            {
+                MessageBox.Show("Checout Completed \n\n Total Bill : " + NetAmountBox.Text + "");
+                ProductBarcodeBox.Text = "";
+                ProductNameBox.Text = "";
+                itemquantity.Text = "";
+                textBox2.Text = "";
+                VehicleSearchBox.Text = "";
+                ClearTableLayout(tableLayoutPanel1);
+                rowcount = 2;
+                //revenue += int.Parse(NetAmountBox.Text);
+            }
+            else
+            {
+                MessageBox.Show("ADD Items To Checkout");
+
+            }
+
+
+
+
+
+        }
+
+        private void ClearTableLayout(TableLayoutPanel tableLayoutPanel)
+        {
+            tableLayoutPanel.SuspendLayout();
+
+
+
+            for (int i = tableLayoutPanel.Controls.Count - 1; i >= 7; i--)
+            {
+                Control control = tableLayoutPanel.Controls[i];
+                tableLayoutPanel.Controls.Remove(control);
+                control.Dispose();
+            }
+            //tableLayoutPanel.RowCount = 1;
+            //tableLayoutPanel.ColumnCount = 1;
+            //tableLayoutPanel.RowStyles.Clear();
+            //tableLayoutPanel.ColumnStyles.Clear();
+
+            tableLayoutPanel.ResumeLayout();
+        }
+        public string getnetamount ()
+        {
+            return NetAmountBox.Text;
         }
     }
 }

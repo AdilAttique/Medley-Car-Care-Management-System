@@ -22,7 +22,7 @@ namespace Medley_Car_Care
         {
             InitializeComponent();
             InitializeTimer();
-
+        
         }
 
         private void OpenChildForm(Form childForm)
@@ -221,6 +221,11 @@ namespace Medley_Car_Care
         }
 
         private void Time_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Revenue_Click(object sender, EventArgs e)
         {
 
         }
