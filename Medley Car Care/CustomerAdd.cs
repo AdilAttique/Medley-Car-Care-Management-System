@@ -16,15 +16,15 @@ namespace Medley_Car_Care
 {
     public partial class CustomerAdd : UserControl
     {
-        
+        SQL sql = new SQL();
         public CustomerAdd()
         {
             InitializeComponent();
         }
-        
+
         public void AddCustomerToRecord()
         {
-            SQL sql = new SQL();
+            
             try
             {
                 string VehicleNumber = vnumber.Text;
@@ -51,9 +51,14 @@ namespace Medley_Car_Care
 
         private void AddCustomer_Click(object sender, EventArgs e)
         {
-            
+
             this.AddCustomerToRecord();
-            
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

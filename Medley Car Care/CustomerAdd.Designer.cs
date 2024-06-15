@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            vnumber = new TextBox();
+            label2 = new Label();
             AddCustomer = new Button();
             address = new TextBox();
             label6 = new Label();
@@ -39,8 +41,6 @@
             email = new TextBox();
             label3 = new Label();
             label1 = new Label();
-            vnumber = new TextBox();
-            label2 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,6 +64,24 @@
             panel1.Size = new Size(1097, 708);
             panel1.TabIndex = 1;
             // 
+            // vnumber
+            // 
+            vnumber.Location = new Point(277, 123);
+            vnumber.Name = "vnumber";
+            vnumber.Size = new Size(234, 23);
+            vnumber.TabIndex = 13;
+            //vnumber.TextChanged += this.vnumber_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(113, 131);
+            label2.Name = "label2";
+            label2.Size = new Size(91, 15);
+            label2.TabIndex = 14;
+            label2.Text = "Vehicle Number";
+            label2.Click += label2_Click;
+            // 
             // AddCustomer
             // 
             AddCustomer.Location = new Point(113, 503);
@@ -80,6 +98,7 @@
             address.Name = "address";
             address.Size = new Size(234, 23);
             address.TabIndex = 10;
+            //address.TextChanged += this.address_TextChanged;
             // 
             // label6
             // 
@@ -89,6 +108,7 @@
             label6.Size = new Size(49, 15);
             label6.TabIndex = 11;
             label6.Text = "Address";
+            //label6.Click += this.label6_Click;
             // 
             // name
             // 
@@ -96,6 +116,7 @@
             name.Name = "name";
             name.Size = new Size(234, 23);
             name.TabIndex = 8;
+            //name.TextChanged += this.name_TextChanged;
             // 
             // label5
             // 
@@ -105,6 +126,7 @@
             label5.Size = new Size(39, 15);
             label5.TabIndex = 9;
             label5.Text = "Name";
+            //label5.Click += this.label5_Click;
             // 
             // pnumber
             // 
@@ -112,6 +134,7 @@
             pnumber.Name = "pnumber";
             pnumber.Size = new Size(234, 23);
             pnumber.TabIndex = 6;
+            //pnumber.TextChanged += this.pnumber_TextChanged;
             // 
             // label4
             // 
@@ -121,6 +144,7 @@
             label4.Size = new Size(88, 15);
             label4.TabIndex = 7;
             label4.Text = "Phone Number";
+            //label4.Click += this.label4_Click;
             // 
             // email
             // 
@@ -128,6 +152,7 @@
             email.Name = "email";
             email.Size = new Size(234, 23);
             email.TabIndex = 4;
+            //email.TextChanged += this.email_TextChanged;
             // 
             // label3
             // 
@@ -137,6 +162,7 @@
             label3.Size = new Size(36, 15);
             label3.TabIndex = 5;
             label3.Text = "Email";
+            //label3.Click += this.label3_Click;
             // 
             // label1
             // 
@@ -149,22 +175,6 @@
             label1.TabIndex = 0;
             label1.Text = "Add New Customer";
             label1.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // vnumber
-            // 
-            vnumber.Location = new Point(277, 123);
-            vnumber.Name = "vnumber";
-            vnumber.Size = new Size(234, 23);
-            vnumber.TabIndex = 13;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(113, 131);
-            label2.Name = "label2";
-            label2.Size = new Size(91, 15);
-            label2.TabIndex = 14;
-            label2.Text = "Vehicle Number";
             // 
             // CustomerAdd
             // 

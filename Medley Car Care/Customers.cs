@@ -41,6 +41,8 @@ namespace Medley_Car_Care
             userControl.BringToFront();
         }
 
+
+        
         private void CustSearchButton_Click(object sender, EventArgs e)
         {
             ShowUserControl(customerSearch);
