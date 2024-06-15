@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Medley_Car_Care
 {
     public partial class Billing : Form
@@ -42,7 +43,6 @@ namespace Medley_Car_Care
 
         private void Billing_Load(object sender, EventArgs e)
         {
-
 
         }
 
@@ -123,6 +123,45 @@ namespace Medley_Car_Care
                 double Result = d - c;
                 BalanceBox.Text = Result.ToString();
             }
+        }
+
+        private void unCheck(CheckBoxAdv current)
+        {
+            if(CashCheck != current)
+            {
+                CashCheck.Checked = false;
+            }
+            if(Credit != current)
+            {
+                Credit.Checked = false;
+            }
+            if(ATMText != current)
+            {
+                ATMText.Checked = false;
+            }
+            if(JazzCashCheck != current)
+            {
+                JazzCashCheck.Checked = false;
+            }
+        }
+        private void CashCheck_CheckStateChanged(object sender, EventArgs e)
+        {
+            unCheck(CashCheck);
+        }
+
+        private void Credit_CheckStateChanged(object sender, EventArgs e)
+        {
+            unCheck(Credit);
+        }
+
+        private void ATMText_CheckStateChanged(object sender, EventArgs e)
+        {
+            unCheck(ATMText);
+        }
+
+        private void JazzCashCheck_CheckStateChanged(object sender, EventArgs e)
+        {
+            unCheck(JazzCashCheck);
         }
     }
 }

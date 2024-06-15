@@ -91,7 +91,6 @@
             label1 = new Label();
             VehicleSearchBox = new TextBox();
             tableLayoutPanel2 = new TableLayoutPanel();
-            calculateConfig1 = new Syncfusion.Calculate.CalculateConfig();
             panel1.SuspendLayout();
             panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PrintInvoice).BeginInit();
@@ -190,6 +189,7 @@
             JazzCashCheck.Size = new Size(96, 34);
             JazzCashCheck.TabIndex = 15;
             JazzCashCheck.Text = "Jazz Cash";
+            JazzCashCheck.CheckStateChanged += JazzCashCheck_CheckStateChanged;
             // 
             // ATMText
             // 
@@ -201,6 +201,7 @@
             ATMText.Size = new Size(77, 34);
             ATMText.TabIndex = 14;
             ATMText.Text = "ATM";
+            ATMText.CheckStateChanged += ATMText_CheckStateChanged;
             // 
             // Credit
             // 
@@ -212,6 +213,7 @@
             Credit.Size = new Size(77, 34);
             Credit.TabIndex = 13;
             Credit.Text = "Credit";
+            Credit.CheckStateChanged += Credit_CheckStateChanged;
             // 
             // ModeOfPaymentText
             // 
@@ -232,6 +234,7 @@
             CashCheck.Size = new Size(77, 34);
             CashCheck.TabIndex = 11;
             CashCheck.Text = "Cash";
+            CashCheck.CheckStateChanged += CashCheck_CheckStateChanged;
             // 
             // CheckoutButton
             // 
@@ -927,6 +930,5 @@
         private Syncfusion.Windows.Forms.Tools.CheckBoxAdv JazzCashCheck;
         private Syncfusion.Windows.Forms.Tools.CheckBoxAdv PrintInvoice;
         private Button CalculatorButton;
-        private Syncfusion.Calculate.CalculateConfig calculateConfig1;
     }
 }

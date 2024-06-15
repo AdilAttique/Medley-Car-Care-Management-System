@@ -121,7 +121,7 @@
   <data name="CalculatorButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAwBJREFUaEPtmVuOTUEUhk8ILxiAHgLmQL81Oh1ETEGIaBKXARDp9DQas+AFA3CJ
+        DAAACwwBP0AiyAAAAwBJREFUaEPtmVuOTUEUhk8ILxiAHgLmQL81Oh1ETEGIaBKXARDp9DQas+AFA3CJ
         e79gBHjgBf9XOUt2KrtqV61T5zSd/SXfQ62svWpX76o6narJyMhIE/bLC/KhfCu/y99zktr08UDSJ303
         4Zzcln2dLsKP8qx0s0duSiv4XF6VR+QBOS+ofVSuyxfS+t+QvFM1Nogf8qJ0FZkR+rwkeQcbTBVMJxvE
         cQI7zAlpgzlDoAQWl60JvkSOVflIzrL4v0lqnJY5LkvyP8h9BIZgp+AB1kRuOt2V3Rdq4R2ZYq98Kck7
@@ -137,7 +137,4 @@
         kz8JjLj29VYEGQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="calculateConfig1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
