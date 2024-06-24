@@ -28,8 +28,8 @@ namespace Medley_Car_Care
 
                 try
                 {
-                    string query = "SELECT * FROM Employee WHERE CNIC Like'%"+empsearch.Text+"%';";
-                    
+                    string query = "SELECT * FROM Employee WHERE CNIC Like'%" + empsearch.Text + "%';";
+
                     dt = sql.ExecuetQuery(query);
                     empdgv.DataSource = dt;
 
@@ -43,6 +43,11 @@ namespace Medley_Car_Care
             {
                 empdgv.DataSource = null;
             }
+        }
+
+        private void empnamesearchdd_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

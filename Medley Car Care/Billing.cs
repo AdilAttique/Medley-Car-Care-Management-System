@@ -334,6 +334,11 @@ namespace Medley_Car_Care
                 itemquantity.Text = "";
                 textBox2.Text = "";
                 VehicleSearchBox.Text = "";
+                NetAmountBox.Text = "";
+                DiscountBox.Text = "";
+                TotalAmountBox.Text = "";
+                ReceivedBox.Text = "";
+                BalanceBox.Text = "";
                 ClearTableLayout(tableLayoutPanel1);
                 rowcount = 2;
                 //revenue += int.Parse(NetAmountBox.Text);
