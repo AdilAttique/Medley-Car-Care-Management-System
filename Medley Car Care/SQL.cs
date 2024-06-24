@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Syncfusion.PMML;
 using System.Data;
+using Windows.Storage.Streams;
 
 
 
@@ -30,7 +31,7 @@ namespace Medley_Car_Care
 
         // Helper Functions 
 
-        private void CloseConnection()
+        public void CloseConnection()
         {
             if(Con.State==System.Data.ConnectionState.Open)
             {
@@ -38,7 +39,7 @@ namespace Medley_Car_Care
             }
         }
 
-        private void OpenConnection()
+        public void OpenConnection()
         {
             if (Con.State == System.Data.ConnectionState.Closed)
             {
@@ -76,6 +77,19 @@ namespace Medley_Car_Care
                 CloseConnection();
             }
             return dt;
+        }
+
+
+        public SqlDataReader ExecuteReader(string query)
+        {
+            SqlDataReader rdr;
+
+            OpenConnection();
+
+            SqlCommand cmd = new SqlCommand(query, Con);
+            rdr = cmd.ExecuteReader();
+
+            return rdr;
         }
 
         public object ExecuteScalar(string query)
