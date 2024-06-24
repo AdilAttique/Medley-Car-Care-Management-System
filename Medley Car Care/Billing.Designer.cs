@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billing));
+            Syncfusion.Windows.Forms.MetroColorTable metroColorTable1 = new Syncfusion.Windows.Forms.MetroColorTable();
             panel1 = new Panel();
             panel22 = new Panel();
             CalculatorButton = new Button();
@@ -64,7 +65,11 @@
             hashText = new Label();
             panel6 = new Panel();
             BarcodeText = new Label();
+            editableList1 = new Syncfusion.Windows.Forms.Tools.EditableList();
             panel5 = new Panel();
+            additemtotable = new Button();
+            qtylable = new Label();
+            itemquantity = new TextBox();
             ProductNameText = new Label();
             ProductNameBox = new TextBox();
             ProductBarcodeText = new Label();
@@ -106,6 +111,7 @@
             panel8.SuspendLayout();
             panel7.SuspendLayout();
             panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)editableList1.TextBox).BeginInit();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
@@ -246,6 +252,7 @@
             CheckoutButton.TabIndex = 10;
             CheckoutButton.Text = "Checkout";
             CheckoutButton.UseVisualStyleBackColor = false;
+            CheckoutButton.Click += CheckoutButton_Click;
             // 
             // BalanceBox
             // 
@@ -255,7 +262,6 @@
             BalanceBox.ReadOnly = true;
             BalanceBox.Size = new Size(153, 43);
             BalanceBox.TabIndex = 9;
-            BalanceBox.TextChanged += BalanceBox_TextChanged;
             // 
             // BalanceText
             // 
@@ -364,6 +370,7 @@
             tableLayoutPanel1.Controls.Add(panel8, 2, 0);
             tableLayoutPanel1.Controls.Add(panel7, 0, 0);
             tableLayoutPanel1.Controls.Add(panel6, 1, 0);
+            tableLayoutPanel1.Controls.Add(editableList1, 1, 1);
             tableLayoutPanel1.Location = new Point(0, 208);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 24;
@@ -391,7 +398,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.119887F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.119887F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 4.119887F));
-            tableLayoutPanel1.Size = new Size(1676, 526);
+            tableLayoutPanel1.Size = new Size(1677, 526);
             tableLayoutPanel1.TabIndex = 4;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -400,9 +407,9 @@
             panel12.BackColor = Color.SkyBlue;
             panel12.Controls.Add(TotalPriceText);
             panel12.Dock = DockStyle.Fill;
-            panel12.Location = new Point(1428, 4);
+            panel12.Location = new Point(1432, 4);
             panel12.Name = "panel12";
-            panel12.Size = new Size(197, 20);
+            panel12.Size = new Size(198, 20);
             panel12.TabIndex = 6;
             // 
             // TotalPriceText
@@ -421,9 +428,9 @@
             panel11.BackColor = Color.SkyBlue;
             panel11.Controls.Add(PricePerUnitText);
             panel11.Dock = DockStyle.Fill;
-            panel11.Location = new Point(1224, 4);
+            panel11.Location = new Point(1227, 4);
             panel11.Name = "panel11";
-            panel11.Size = new Size(197, 20);
+            panel11.Size = new Size(198, 20);
             panel11.TabIndex = 5;
             // 
             // PricePerUnitText
@@ -442,9 +449,9 @@
             panel10.BackColor = Color.SkyBlue;
             panel10.Controls.Add(QuantityPerUnitText);
             panel10.Dock = DockStyle.Fill;
-            panel10.Location = new Point(1020, 4);
+            panel10.Location = new Point(1022, 4);
             panel10.Name = "panel10";
-            panel10.Size = new Size(197, 20);
+            panel10.Size = new Size(198, 20);
             panel10.TabIndex = 4;
             // 
             // QuantityPerUnitText
@@ -463,9 +470,9 @@
             panel9.BackColor = Color.SkyBlue;
             panel9.Controls.Add(QuantityinStock);
             panel9.Dock = DockStyle.Fill;
-            panel9.Location = new Point(816, 4);
+            panel9.Location = new Point(817, 4);
             panel9.Name = "panel9";
-            panel9.Size = new Size(197, 20);
+            panel9.Size = new Size(198, 20);
             panel9.TabIndex = 3;
             // 
             // QuantityinStock
@@ -486,7 +493,7 @@
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(154, 4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(655, 20);
+            panel8.Size = new Size(656, 20);
             panel8.TabIndex = 2;
             // 
             // ProductName
@@ -543,9 +550,51 @@
             BarcodeText.Text = "Barcode";
             BarcodeText.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // editableList1
+            // 
+            editableList1.BackColor = Color.Transparent;
+            editableList1.BeforeTouchSize = new Size(95, 14);
+            // 
+            // 
+            // 
+            editableList1.Button.FlatStyle = FlatStyle.Popup;
+            editableList1.Button.Location = new Point(112, 120);
+            editableList1.Button.Name = "button";
+            editableList1.Button.Size = new Size(30, 20);
+            editableList1.Button.TabIndex = 2;
+            editableList1.Button.Text = "...";
+            editableList1.Button.Visible = false;
+            // 
+            // 
+            // 
+            editableList1.ListBox.Dock = DockStyle.Fill;
+            editableList1.ListBox.DrawMode = DrawMode.OwnerDrawFixed;
+            editableList1.ListBox.Location = new Point(0, 0);
+            editableList1.ListBox.Name = "listBox";
+            editableList1.ListBox.Size = new Size(95, 4);
+            editableList1.ListBox.TabIndex = 0;
+            editableList1.Location = new Point(52, 31);
+            editableList1.Name = "editableList1";
+            editableList1.ScrollMetroColorTable = metroColorTable1;
+            editableList1.Size = new Size(95, 14);
+            editableList1.TabIndex = 7;
+            // 
+            // 
+            // 
+            editableList1.TextBox.BeforeTouchSize = new Size(100, 23);
+            editableList1.TextBox.BorderStyle = BorderStyle.FixedSingle;
+            editableList1.TextBox.Location = new Point(8, 120);
+            editableList1.TextBox.Name = "textBox";
+            editableList1.TextBox.TabIndex = 2;
+            editableList1.TextBox.Visible = false;
+            editableList1.Load += editableList1_Load;
+            // 
             // panel5
             // 
             panel5.BackColor = Color.SkyBlue;
+            panel5.Controls.Add(additemtotable);
+            panel5.Controls.Add(qtylable);
+            panel5.Controls.Add(itemquantity);
             panel5.Controls.Add(ProductNameText);
             panel5.Controls.Add(ProductNameBox);
             panel5.Controls.Add(ProductBarcodeText);
@@ -555,6 +604,38 @@
             panel5.Size = new Size(1676, 47);
             panel5.TabIndex = 3;
             panel5.Paint += panel5_Paint;
+            // 
+            // additemtotable
+            // 
+            additemtotable.BackColor = Color.CornflowerBlue;
+            additemtotable.FlatAppearance.BorderSize = 0;
+            additemtotable.FlatStyle = FlatStyle.Flat;
+            additemtotable.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            additemtotable.Location = new Point(1415, 9);
+            additemtotable.Name = "additemtotable";
+            additemtotable.Size = new Size(109, 24);
+            additemtotable.TabIndex = 15;
+            additemtotable.Text = "ADD";
+            additemtotable.UseVisualStyleBackColor = false;
+            additemtotable.Click += additemtotable_Click;
+            // 
+            // qtylable
+            // 
+            qtylable.AutoSize = true;
+            qtylable.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            qtylable.Location = new Point(1122, 13);
+            qtylable.Name = "qtylable";
+            qtylable.Size = new Size(62, 17);
+            qtylable.TabIndex = 5;
+            qtylable.Text = "Quantity";
+            // 
+            // itemquantity
+            // 
+            itemquantity.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            itemquantity.Location = new Point(1224, 8);
+            itemquantity.Name = "itemquantity";
+            itemquantity.Size = new Size(128, 27);
+            itemquantity.TabIndex = 4;
             // 
             // ProductNameText
             // 
@@ -573,6 +654,7 @@
             ProductNameBox.Name = "ProductNameBox";
             ProductNameBox.Size = new Size(505, 27);
             ProductNameBox.TabIndex = 2;
+            ProductNameBox.TextChanged += ProductNameBox_TextChanged;
             // 
             // ProductBarcodeText
             // 
@@ -591,6 +673,7 @@
             ProductBarcodeBox.Name = "ProductBarcodeBox";
             ProductBarcodeBox.Size = new Size(157, 27);
             ProductBarcodeBox.TabIndex = 0;
+            ProductBarcodeBox.TextChanged += ProductBarcodeBox_TextChanged;
             // 
             // panel4
             // 
@@ -619,6 +702,7 @@
             SearchCustomerButton.TabIndex = 14;
             SearchCustomerButton.Text = "Search Customer";
             SearchCustomerButton.UseVisualStyleBackColor = false;
+            SearchCustomerButton.Click += SearchCustomerButton_Click;
             // 
             // PrevBalanaceText
             // 
@@ -655,6 +739,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(198, 27);
             textBox2.TabIndex = 10;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // CustomerNameText
             // 
@@ -856,6 +941,7 @@
             panel7.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)editableList1.TextBox).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
@@ -930,5 +1016,6 @@
         private Syncfusion.Windows.Forms.Tools.CheckBoxAdv JazzCashCheck;
         private Syncfusion.Windows.Forms.Tools.CheckBoxAdv PrintInvoice;
         private Button CalculatorButton;
+        private Syncfusion.Calculate.CalculateConfig calculateConfig1;
     }
 }

@@ -1,9 +1,11 @@
-﻿using Syncfusion.UI.Xaml.Diagram;
+﻿using Syncfusion.UI.Xaml.Schedule;
+using Syncfusion.UI.Xaml.SmithChart;
 using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,13 +13,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
+
+
 namespace Medley_Car_Care
 {
+
     public partial class Billing : Form
     {
         public Billing()
         {
             InitializeComponent();
+            sql = new SQL();
             /*for (int row = 0; row < tableLayoutPanel1.RowCount; row++)
             {
                 for (int col = 0; col < tableLayoutPanel1.ColumnCount; col++)
@@ -73,6 +80,7 @@ namespace Medley_Car_Care
 
         private void VehicleSearchButton_Click(object sender, EventArgs e)
         {
+            string VehicleNumber = VehicleSearchBox.Text;
 
         }
 
