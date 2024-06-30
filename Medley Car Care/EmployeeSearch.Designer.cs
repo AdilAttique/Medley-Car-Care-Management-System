@@ -66,6 +66,7 @@
             empsearchbtn.Size = new Size(36, 29);
             empsearchbtn.TabIndex = 7;
             empsearchbtn.UseVisualStyleBackColor = true;
+            empsearchbtn.Click += empsearchbtn_Click;
             // 
             // empsearch
             // 

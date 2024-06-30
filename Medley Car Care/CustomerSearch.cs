@@ -17,13 +17,13 @@ namespace Medley_Car_Care
         public CustomerSearch()
         {
             InitializeComponent();
-            sql=new SQL();
+            sql = new SQL();
             search.TextChanged += new EventHandler(search_TextChanged);
         }
 
         private void searchbtn_Click(object sender, EventArgs e)
         {
-            
+
 
             try
             {
@@ -44,8 +44,6 @@ namespace Medley_Car_Care
 
             if (!string.IsNullOrEmpty(search.Text))
             {
-
-
                 try
                 {
                     string query = "SELECT * FROM Customer WHERE VehicleNumber LIKE'%" + search.Text + "%';";
@@ -65,6 +63,11 @@ namespace Medley_Car_Care
             }
         }
         private void CustomerSearch_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search_TextChanged_1(object sender, EventArgs e)
         {
 
         }

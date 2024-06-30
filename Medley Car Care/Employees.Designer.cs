@@ -142,6 +142,7 @@
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(1904, 934);
             mainPanel.TabIndex = 8;
+            mainPanel.Paint += mainPanel_Paint_1;
             // 
             // Employees
             // 

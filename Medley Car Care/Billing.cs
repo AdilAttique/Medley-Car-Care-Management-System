@@ -328,7 +328,7 @@ namespace Medley_Car_Care
         {
             if (!string.IsNullOrEmpty(TotalAmountBox.Text))
             {
-                MessageBox.Show("Checout Completed \n\n Total Bill : " + NetAmountBox.Text + "");
+                MessageBox.Show("Checout Completed \n\n Total Bill : " + NetAmountBox.Text + "" , "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ProductBarcodeBox.Text = "";
                 ProductNameBox.Text = "";
                 itemquantity.Text = "";

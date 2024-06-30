@@ -33,25 +33,25 @@ namespace Medley_Car_Care
 
         public void AddItemToInventory()
         {
-           
+
             try
             {
                 string BarCode = barcode.Text;
                 string ItemName = itemname.Text;
                 float PricePerUnit = float.Parse(priceperunit.Text);
                 int QuantityInStock = int.Parse(quantityinstock.Text);
-                
+
 
                 string query = "INSERT INTO Item (BarCode, ItemName, PricePerUnit) VALUES ('" + BarCode + "','" + ItemName + "','" + PricePerUnit + "');";
                 string query2 = "INSERT INTO Inventory (BarCode, QuantityInStock) VALUES ('" + BarCode + "','" + QuantityInStock + "');";
                 sql.ExecuetNonQuery(query);
                 sql.ExecuetNonQuery(query2);
-                MessageBox.Show("Item Added Successfully With Bar Code= " + BarCode + "");
+                MessageBox.Show("Item Added Successfully With Bar Code= " + BarCode + "", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 barcode.Text = "";
                 itemname.Text = "";
                 priceperunit.Text = "";
                 quantityinstock.Text = "";
-               
+
 
             }
             catch (SqlException ex)
@@ -60,10 +60,12 @@ namespace Medley_Car_Care
             }
         }
 
-
-        private void Additem_Click(object sender, EventArgs e)
+        private void AddItem_Click_1(object sender, EventArgs e)
         {
-            this.AddItemToInventory();
+            if (barcode.Text != "" && itemname.Text != "" && priceperunit.Text != "" && quantityinstock.Text != "")
+                this.AddItemToInventory();
+            else
+                MessageBox.Show("Please Fill all the Details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

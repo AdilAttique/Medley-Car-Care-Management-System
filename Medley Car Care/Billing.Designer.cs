@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billing));
             Syncfusion.Windows.Forms.MetroColorTable metroColorTable1 = new Syncfusion.Windows.Forms.MetroColorTable();
             panel1 = new Panel();
             panel22 = new Panel();
-            CalculatorButton = new Button();
             PrintInvoice = new Syncfusion.Windows.Forms.Tools.CheckBoxAdv();
             JazzCashCheck = new Syncfusion.Windows.Forms.Tools.CheckBoxAdv();
             ATMText = new Syncfusion.Windows.Forms.Tools.CheckBoxAdv();
@@ -137,7 +135,6 @@
             // panel22
             // 
             panel22.BackColor = Color.SkyBlue;
-            panel22.Controls.Add(CalculatorButton);
             panel22.Controls.Add(PrintInvoice);
             panel22.Controls.Add(JazzCashCheck);
             panel22.Controls.Add(ATMText);
@@ -160,20 +157,6 @@
             panel22.Name = "panel22";
             panel22.Size = new Size(1676, 185);
             panel22.TabIndex = 5;
-            // 
-            // CalculatorButton
-            // 
-            CalculatorButton.BackColor = Color.SkyBlue;
-            CalculatorButton.BackgroundImage = (Image)resources.GetObject("CalculatorButton.BackgroundImage");
-            CalculatorButton.BackgroundImageLayout = ImageLayout.None;
-            CalculatorButton.FlatAppearance.BorderSize = 0;
-            CalculatorButton.FlatStyle = FlatStyle.Flat;
-            CalculatorButton.Location = new Point(1571, 19);
-            CalculatorButton.Name = "CalculatorButton";
-            CalculatorButton.Size = new Size(54, 53);
-            CalculatorButton.TabIndex = 17;
-            CalculatorButton.UseVisualStyleBackColor = false;
-            CalculatorButton.Click += CalculatorButton_Click;
             // 
             // PrintInvoice
             // 
@@ -1012,7 +995,6 @@
         private Syncfusion.Windows.Forms.Tools.CheckBoxAdv CashCheck;
         private Syncfusion.Windows.Forms.Tools.CheckBoxAdv JazzCashCheck;
         private Syncfusion.Windows.Forms.Tools.CheckBoxAdv PrintInvoice;
-        private Button CalculatorButton;
         private Syncfusion.Calculate.CalculateConfig calculateConfig1;
         private Syncfusion.Windows.Forms.Tools.EditableList editableList1;
         private Button additemtotable;

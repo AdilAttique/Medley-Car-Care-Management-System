@@ -20,7 +20,6 @@
     <PackageReference Include="Syncfusion.Shared.Base" Version="25.2.6" />
     <PackageReference Include="Syncfusion.Tools.Windows" Version="25.2.6" />
     <PackageReference Include="Syncfusion.UI.WPF.NET" Version="25.2.7" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="25.2.6" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 

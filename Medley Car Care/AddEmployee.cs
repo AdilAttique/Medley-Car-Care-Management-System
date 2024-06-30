@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,7 +33,7 @@ namespace Medley_Car_Care
             {
                 string CNIC = cnic.Text;
                 string Name = empname.Text;
-                string Address=empaddress.Text;
+                string Address = empaddress.Text;
                 DateTime HireDate = emphiredate.Value;
                 string JobTitle = jobtitle.Text;
                 float Salary = float.Parse(salary.Text);
@@ -52,9 +53,29 @@ namespace Medley_Car_Care
                 sql.ThrowException(ex);
             }
         }
+
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jobtitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void AddEmp_Click(object sender, EventArgs e)
         {
-            AddEmployeeToRecord();
+            if (cnic.Text != "" && empname.Text != "" && empaddress.Text != "" && jobtitle.Text != "" && salary.Text != "")
+                this.AddEmployeeToRecord();
+            else
+                MessageBox.Show("Please Fill all the Details!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

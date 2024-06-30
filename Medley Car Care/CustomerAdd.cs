@@ -24,7 +24,7 @@ namespace Medley_Car_Care
 
         public void AddCustomerToRecord()
         {
-            
+
             try
             {
                 string VehicleNumber = vnumber.Text;
@@ -35,7 +35,7 @@ namespace Medley_Car_Care
 
                 string query = "INSERT INTO Customer (VehicleNumber, Name, PhoneNumber, Email, Address) VALUES ('" + VehicleNumber + "','" + CustomerName + "','" + CustomerPhoneNumber + "',  '" + CustomerEmail + "', '" + CustomerAddress + "');";
                 sql.ExecuetNonQuery(query);
-                MessageBox.Show("Customr Added Successfully With Vehicle Number = " + VehicleNumber + "");
+                MessageBox.Show("Customr Added Successfully With Vehicle Number = " + VehicleNumber + "", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 vnumber.Text = "";
                 name.Text = "";
                 pnumber.Text = "";
@@ -51,12 +51,34 @@ namespace Medley_Car_Care
 
         private void AddCustomer_Click(object sender, EventArgs e)
         {
-
-            this.AddCustomerToRecord();
+            if (vnumber.Text != "" && name.Text != "" && pnumber.Text != "" && email.Text != "" && address.Text != "")
+                this.AddCustomerToRecord();
+            else
+                MessageBox.Show("Please Fill all the Details!", "Error" , MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CustomerAdd_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void autoLabel1_Click(object sender, EventArgs e)
         {
 
         }

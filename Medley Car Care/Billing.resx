@@ -117,26 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CalculatorButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAwBJREFUaEPtmVuOTUEUhk8ILxiAHgLmQL81Oh1ETEGIaBKXARDp9DQas+AFA3CJ
-        e79gBHjgBf9XOUt2KrtqV61T5zSd/SXfQ62svWpX76o6narJyMhIE/bLC/KhfCu/y99zktr08UDSJ303
-        4Zzcln2dLsKP8qx0s0duSiv4XF6VR+QBOS+ofVSuyxfS+t+QvFM1Nogf8qJ0FZkR+rwkeQcbTBVMJxvE
-        cQI7zAlpgzlDoAQWl60JvkSOVflIzrL4v0lqnJY5LkvyP8h9BIZgp+AB1kRuOt2V3Rdq4R2ZYq98Kck7
-        T2AItliSWdgp+BLk8LlvyMPSC8/elDZ1cl/mmiTnfmgN8E6SzO6U4rEkh0G04pakJtMsBbsZOfzODPJV
-        knwotPqxHPsSzyRtj08lLEna1E7BOw3l/MU6yBHnWNurEbf7KMkJeIpZ26sRt/soyQl4ilnbqxG3+yjJ
-        CXiKWdurEbf7KMkJeIqxYC1W6xNpWCxHSU6gabFKmvbdtFglTfv2FOPX+Iv8LE8SmJKKn5J9cU/fSTzF
-        eCGLfSIwpTZusRwlOQFPsV0zEKYHL8dLrRCYkosTi+OevpM0LVZJ076bFqukad+eYqldKBcnFsc9fSfx
-        FOOFLNZdvLVxi+UoyQl4iu2ageR2p1ScWBz39J2kabFKmvbdtFglTfv2FLP/qSwey/T673atlN1F3c3v
-        xi2WoyQn4Cn2Tw7Ecxxku5N1EhvvTn27VvPjoJIDOg7RyOGEsBW3JTVzB3THJDlFB3TcFJHM/UQKFjc5
-        HHMyGP6aXniWQfyU1MwdmV6X5GyF1gB2iM0lS+4QmwNn8lo6dIj9SpJXdIjNtQLXXTzAJUsO/npMBa4G
-        ui9UY+m1whVJ/ntZdK0A3NnxEFOHS5adZlky9X7JNQI1cM1lg+GShU+7aOiTL2Hr556shvVhg0EuWbif
-        4Gj/oJwX1GZ3YmHbmuBLMIiZ7jG5s+O6ywa0aFkT1dMpBYuLnYKbojdylsU9JLVfS7ZY+ixe2CMjIykm
-        kz8JjLj29VYEGQAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="calculateConfig1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

@@ -76,6 +76,7 @@
             search.PlaceholderText = "Search here";
             search.Size = new Size(282, 29);
             search.TabIndex = 6;
+            search.TextChanged += search_TextChanged_1;
             // 
             // CustomerSearch
             // 

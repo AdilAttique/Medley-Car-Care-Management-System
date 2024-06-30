@@ -41,12 +41,12 @@ namespace Medley_Car_Care
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void EmpSearchButton_Click(object sender, EventArgs e)
@@ -65,6 +65,11 @@ namespace Medley_Car_Care
         {
             ShowUserControl(addemployee);
             this.AddNewEmp.BackColor = Color.MediumBlue;
+        }
+
+        private void mainPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

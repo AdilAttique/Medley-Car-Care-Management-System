@@ -24,7 +24,8 @@ namespace Medley_Car_Care
         // Constructor
         public SQL()
         {
-            ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\visual studio\Medley-Car-Care-Management-System\Medley Car Care\MedleyDB.mdf; Integrated Security = True";
+            ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\BS-CS 23-196 PF Lab#1\Medley Car Care\Medley Car Care\MedleyDB.mdf; Integrated Security = True";
+            //ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\visual studio\Medley-Car-Care-Management-System\Medley Car Care\MedleyDB.mdf; Integrated Security = True";
             Con = new SqlConnection(ConnectionString);
         }
 
